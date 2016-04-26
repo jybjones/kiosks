@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kiosks</title>
+<style>
+  @font-face {
+    font-family: "proximaNova semiBold";
+    src: url('../kiosks/proximanova/proximanova-sbold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova-sbold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: "proximaNova bold";
+    src: url('../kiosks/proximanova/proximanova-bold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: "regular";
+    src: url('../kiosks/proximanova/proximanova-reg-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova-reg-webfont.woff') format('woff');
+  }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-80 { font-size: 80px; }
+
+  
+    /* fix padding under menu after resize */
+    @media screen and (max-width: 767px) {
+        body { padding-top: 75px; }
+    }
+    @media screen and (min-width:768px) and (max-width: 991px) {
+        body { padding-top: 150px; }
+    }
+    @media screen and (min-width: 992px) {
+        body { padding-top: 75px; }
+    }
+ 
+html, body {
+  height:100%;
+  min-height:100%;
+  overflow: hidden;
+  background: #6AC5FB !important;
+  color: white !important;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/*//navbar & header//*/
+nav.navbar.navbar-fixed-top {
+    background: #53B6F0;
+    height: 10vh;
+    padding: 3%;
+}
+.navbar {
+    background: #53B6F0;
+}
+.navbar-header {
+    float: none !important;
+    /*transform: translateY(100%);*/
+}
+.livewell {
+    width: 40vw;
+    display: inline-block;
+    float: left;
+}
+.kioskbrand {
+    width: 25vw;
+    float: right;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/* content styles */
+
+.item {
+  display:table;
+    width:100%;
+    height:100%;
+  border:1px solid #cecece;
+    padding:16px 8px;
+  background:#ededed;
+  background:-webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+  background:-moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+  background:-ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+}
+.content {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+.content:before {
+    content:"Content";
+    font-family:sans-serif;
+    font-size:12px;
+    letter-spacing:1px;
+    color:#747474;
+}
+
+
+/* visual styles */
+
+h1 {
+    margin:40px 0px 20px 0px;
+    color:white;
+    font-size:28px;
+    line-height:34px;
+    text-align:center;
+}
+
+h2.password {
+  /*font-family: 'regular';*/
+    padding-top: 10vh;
+}
+[class*="col-"] {
+    padding-top:10px;
+    padding-bottom:15px;
+  border:1px solid #80aa00;
+  
+}
+[class*="col-"]:before {
+    display:block;position:relative;
+    /*content:"COLUMN";*/
+    margin-bottom:8px;
+  font-family:sans-serif;
+  font-size:10px;
+    letter-spacing:1px;
+    color:#658600;
+    text-align:left;
+}
+
+
+.numbers {
+    height: 70vh;
+    width: 50vw;
+    display: inline-block;
+    color: #115F98;
+}
+.row.num-btn {
+    padding-top: 6vh;
+}
+
+.btn-round {
+    background-color: transparent;
+    border-radius: 999em;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 36px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 15px;
+    border-style: solid;
+    border-color: #115F98;
+}
+
+.btn-round span {
+    position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-20%);
+  color: #FFF;
+}
+.btn-round.text {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: orange;
+}
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="livewell">
+            <img src="living-well-white.svg" alt="livingwell"></img>
+          </div>
+         <div class="kioskbrand">
+          <img src="kiosk logo.svg" alt="kiosk"></img>
+        </div>
+    </div>
+</nav>
+   
+<div class="container">
+    <div class="row row-centered">
+       <!--  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> -->
+            <h2 class="password">Enter Passcode</h2> <li><a href="#pass-entered">Submit </a></li>
+            <div class="numbers">
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+
+             <p class="num-space">
+            <ul class='list-inline'>
+              <li><div class="btn-round"><span>1</span></div></li>
+              <li><div class="btn-round"><span>2</span></div></li>
+              <li><div class="btn-round"><span>3</span></div></li>
+            </ul>
+            </p>
+
+             <p>
+            <ul class='list-inline'>
+              <li><div class="btn-round"><span>4</span></div></li>
+              <li><div class="btn-round"><span>5</span></div></li>
+              <li><div class="btn-round"><span>6</span></div></li>
+            </ul>
+            </p>
+             <p>
+            <ul class='list-inline'>
+              <li><div class="btn-round"><span>7</span></div></li>
+              <li><div class="btn-round"><span>8</span></div></li>
+              <li><div class="btn-round"><span>9</span></div></li>
+            </ul>
+            </p>
+            <p>
+            <ul class='list-inline'>
+            <li><div class="btn-round text"><span></span></div></li>
+              <li><div class="btn-round"><span>0</span></div></li>
+              <li><div class="btn-round text"><span>DEL</span></div></li>
+            </ul>
+            </p>
+            </div>    <!-- //end numbers//      -->
+    </div>
+</div>
+
+
+<section id="pass-entered">
+    <div class="container stickyConten">   
+      <div class="row">
+        <div class="col-lg-12 text-center">
+        <h1>Waiting Room</h1>
+        </div>
+      </div>
+    <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+
+     <div class="row row-centered">
+        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+          
+      </div>
+             
+      
+    </div><!-- /.container -->
+  </section>
+
+
+<!-- <div class="container">
+    <div class="row row-centered">
+        <div class="col-xs-6 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-6 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+</div> -->
+
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
+</body>
+</html>                                   
