@@ -34,10 +34,12 @@
          url('../kiosks/proximanova/proximanova-light-webfont.ttf')  format('truetype'),
          url('../kiosks/proximanova/proximanova-light-webfont.woff') format('woff');
   }
-
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-80 { font-size: 80px; }
+
   
     /* fix padding under menu after resize */
     @media screen and (max-width: 767px) {
@@ -75,19 +77,18 @@ nav.navbar.navbar-fixed-top {
     float: none !important;
 }
 .livewell {
-    width: 45vw;
+    width: 40vw;
     display: inline-block;
     float: left;
     padding-top: 2vh;
-    margin-left: -7%;
+    margin-left: -5%;
 }
 .kioskbrand {
     width: 25vw;
     float: right;
     padding-top: 2vh;
-    margin-right: -7%;
+    margin-right: -5%;
 }
-
 /* centered columns styles */
 .row-centered {
     text-align:center;
@@ -127,6 +128,7 @@ nav.navbar.navbar-fixed-top {
     color:#747474;
 }
 
+
 /* visual styles */
 
 h1 {
@@ -158,14 +160,12 @@ h2.password {
     text-align:left;
 }
 
+
 .numbers {
-  font-family: 'proximaNova-light';
-  font-size: 30px;
     height: 70vh;
     width: 50vw;
     display: inline-block;
     color: #115F98;
-    
 }
 .row.num-btn {
     padding-top: 6vh;
@@ -174,20 +174,22 @@ h2.password {
 .btn-round {
     background-color: transparent;
     border-radius: 999em;
-    width: 110px;
-    height: 110px;
-    font-family: 'proximaNova-light';
-    /*font-size: 36px; */
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 36px;
     position: relative;
     cursor: pointer;
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 50px;
     margin-left: 15px;
     border-style: solid;
     border-color: #115F98;
 }
+
 .btn-round span {
-  position: absolute;
+    position: absolute;
   left: 0;
   top: 50%;
   height: 100%;
@@ -195,16 +197,22 @@ h2.password {
   text-align: center;
   transform: translateY(-20%);
   color: #FFF;
- /* font-size: 24px;*/
 }
 .btn-round.text {
     border-radius: 0;
     box-shadow: none;
     border-color: transparent;
     font-family: 'proximaNova-light';
-    font-size: 20px;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: orange;
+}
 </style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -269,8 +277,6 @@ h2.password {
             </div>    <!-- //end numbers//      -->
     </div>
 </div>
-</br>
-</br>
 
 
 <section id="pass-entered">
@@ -336,5 +342,19 @@ h2.password {
     </div><!-- /.container -->
   </section>
 
+
+<!-- <div class="container">
+    <div class="row row-centered">
+        <div class="col-xs-6 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
+        <div class="col-xs-6 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
+    </div>
+</div> -->
+
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
 </body>
 </html>                                   
