@@ -39,16 +39,16 @@
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
   
-    /* fix padding under menu after resize */
-    @media screen and (max-width: 767px) {
-        body { padding-top: 75px; }
-    }
-    @media screen and (min-width:768px) and (max-width: 991px) {
-        body { padding-top: 150px; }
-    }
-    @media screen and (min-width: 992px) {
-        body { padding-top: 75px; }
-    }
+/* fix padding under menu after resize */
+@media screen and (max-width: 767px) {
+  body { padding-top: 75px; }
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+  body { padding-top: 150px; }
+}
+@media screen and (min-width: 992px) {
+  body { padding-top: 75px; }
+}
  
 html, body {
   height:100%;
@@ -58,133 +58,105 @@ html, body {
   color: white !important;
 }
 body {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 /*//navbar & header//*/
 nav.navbar.navbar-fixed-top {
   background: #53B6F0;
-   padding-top: 5%;
-   padding-bottom: 3%;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  height: 12vh;
 }
 .navbar {
-    background: #53B6F0;
+  background: #53B6F0;
 }
 .navbar-header {
-    float: none !important;
+  float: none !important;
 }
 .livewell {
-    width: 45vw;
-    display: inline-block;
-    float: left;
-    padding-top: 2vh;
-    margin-left: -7%;
+  width: 45vw;
+  display: inline-block;
+  float: left;
+  padding-top: 2vh;
+  margin-left: -7%;
 }
 .kioskbrand {
-    width: 25vw;
-    float: right;
-    padding-top: 2vh;
-    margin-right: -7%;
+  width: 25vw;
+  float: right;
+  padding-top: 2vh;
+  margin-right: -7%;
 }
 
 /* centered columns styles */
 .row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
-
-/* content styles */
-
-.item {
-  display:table;
-    width:100%;
-    height:100%;
-  border:1px solid #cecece;
-    padding:16px 8px;
-  background:#ededed;
-  background:-webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
-  background:-moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
-  background:-ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
-}
-.content {
-  display:table-cell;
-  vertical-align:middle;
   text-align:center;
 }
-.content:before {
-    content:"Content";
-    font-family:sans-serif;
-    font-size:12px;
-    letter-spacing:1px;
-    color:#747474;
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
 }
 
-/* visual styles */
 
+/* visual styles */
 h1 {
-    margin:40px 0px 20px 0px;
-    color:white;
-    font-size:28px;
-    line-height:34px;
-    text-align:center;
+  margin:40px 0px 20px 0px;
+  color:white;
+  font-size:28px;
+  line-height:34px;
+  text-align:center;
 }
 
 h2.password {
   font-family: 'proximaNova-light';
-    padding-top: 10vh;
+  padding-top: 10vh;
 }
-[class*="col-"] {
-    padding-top:10px;
-    padding-bottom:15px;
-  border:1px solid #80aa00;
-  
+
+p{
+  color: #115F98;
 }
-[class*="col-"]:before {
-    display:block;position:relative;
-    /*content:"COLUMN";*/
-    margin-bottom:8px;
-  font-family:sans-serif;
-  font-size:10px;
-    letter-spacing:1px;
-    color:#658600;
-    text-align:left;
+.title {
+  color: #115F98;
 }
+.doc {
+  color: gray;
+}
+
+p.doc-name {
+    display: inline-block;
+}
+
 
 .numbers {
   font-family: 'proximaNova-light';
   font-size: 30px;
-    height: 70vh;
-    width: 50vw;
-    display: inline-block;
-    color: #115F98;
+  height: 70vh;
+  width: 50vw;
+  display: inline-block;
+  color: #115F98;
     
 }
 .row.num-btn {
-    padding-top: 6vh;
+  padding-top: 6vh;
 }
 
 .btn-round {
-    background-color: transparent;
-    border-radius: 999em;
-    width: 110px;
-    height: 110px;
-    font-family: 'proximaNova-light';
-    /*font-size: 36px; */
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 25px;
-    margin-left: 15px;
-    border-style: solid;
-    border-color: #115F98;
+  background-color: transparent;
+  border-radius: 999em;
+  width: 110px;
+  height: 110px;
+  font-family: 'proximaNova-light';
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 15px;
+  border-style: solid;
+  border-color: #115F98;
 }
 .btn-round span {
   position: absolute;
@@ -195,24 +167,44 @@ h2.password {
   text-align: center;
   transform: translateY(-20%);
   color: #FFF;
- /* font-size: 24px;*/
 }
 .btn-round.text {
-    border-radius: 0;
-    box-shadow: none;
-    border-color: transparent;
-    font-family: 'proximaNova-light';
-    font-size: 20px;
+  border-radius: 0;
+  box-shadow: none;
+  border-color: transparent;
+  font-family: 'proximaNova-light';
+  font-size: 20px;
+}
+
+
+img.circle.responsive-img {
+    height: 50px;
+    width: 50px;
+}
+
+.col.s1.collection-item.avatar {
+    background: transparent;
+    border: none;
+}
+.col.s2.card-panel {
+    padding: 20px;
+    background: #DCD4D6;
+    vertical-align: center;
+    height: 50px;
 }
 
 </style>
-
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+ <!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <!-- Fixed navbar -->
@@ -272,69 +264,140 @@ h2.password {
 </br>
 </br>
 
+<div class="container signIn"> 
+<section id="pass-entered">  
 
-<section id="pass-entered">
-    <div class="container stickyConten">   
-      <div class="row">
-        <div class="col-lg-12 text-center">
-        <h1>Waiting Room</h1>
+  <div class="row col s12">
+    <div class="col s2 card-panel">
+        <span class="time">
+          TIME
+        </span>
+    </div> <!-- //end 2//. -->
+
+     <div class=" col s10 card-panel">
+      <div class="col s2 collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      </div>
+      <div class="col s4">
+          <span class="title">
+            First Name Last Name
+          </span>
         </div>
+        <div class="col s4">
+          <span class="doc">
+           Doctors Name
+          </span>
+        </div>
+         <!-- <li class="collection-item avatar"> -->
+     <!--  <img src="images/avatar.jpeg" alt="" class="circle"> -->
+   <!--  </li> -->
+  </div> <!-- //end 10//. -->
+</div> <!-- //end 12//. -->
+<div class="row col s12">
+    <div class="col s2 card-panel">
+        <span class="time">
+          TIME
+        </span>
+    </div> <!-- //end 2//. -->
+
+     <div class=" col s10 card-panel">
+      <div class="col s2 collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
       </div>
-    <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
+      <div class="col s4">
+          <span class="title">
+            First Name Last Name
+          </span>
+        </div>
+        <div class="col s4">
+          <span class="doc">
+           Doctors Name
+          </span>
+        </div>
+         <!-- <li class="collection-item avatar"> -->
+     <!--  <img src="images/avatar.jpeg" alt="" class="circle"> -->
+   <!--  </li> -->
+  </div> <!-- //end 10//. -->
+</div> <!-- //end 12//. -->
+<div class="row col s12">
+    <div class="col s2 card-panel">
+        <span class="time">
+          TIME
+        </span>
+    </div> <!-- //end 2//. -->
 
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-
-     <div class="row row-centered">
-        <div class="col-xs-2 col-centered">HELLO<div class="item"><div class="content"></div></div></div>
-        <div class="col-xs-10 col-centered">Hellp<div class="item"><div class="content"></div></div></div>
-    </div>
-          
+     <div class=" col s10 card-panel">
+      <div class="col s2 collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
       </div>
-             
-      
-    </div><!-- /.container -->
-  </section>
+      <div class="col s4">
+          <span class="title">
+            First Name Last Name
+          </span>
+        </div>
+        <div class="col s4">
+          <span class="doc">
+           Doctors Name
+          </span>
+        </div>
+         <!-- <li class="collection-item avatar"> -->
+     <!--  <img src="images/avatar.jpeg" alt="" class="circle"> -->
+   <!--  </li> -->
+  </div> <!-- //end 10//. -->
+</div> <!-- //end 12//. -->
+
+</section>
+</div><!-- /.container -->
+
+
+
+ <!-- <div class="row col s12">
+ <div class="col s2"> SMALL2</div>
+ <div class="col s8" > SMALL8
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle">
+          <span class="title">First Name Last Name</span>
+          <p class="doc-name">First Line </p>  
+        </li>
+
+        <li class="collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>  
+        </li>
+
+        <li class="collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>  
+        </li>
+
+        <li class="collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>  
+        </li>
+
+        <li class="collection-item avatar">
+          <img src="images/avatar.jpeg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>  
+        </li>
+
+    </ul>
+    </div> <!//end row -->
+
+  
+    
 
 </body>
 </html>                                   
