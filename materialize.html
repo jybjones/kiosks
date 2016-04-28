@@ -141,7 +141,7 @@ h4.password {
 .collection {
     /* margin: 0.5rem 0 1rem 0; */
     border: 1px solid #e0e0e0;
-    border-radius: 2px;
+    border-radius: 0 !important;
     overflow: hidden;
     position: relative;
     margin-bottom: 0 !important;
@@ -151,10 +151,42 @@ h4.password {
 }
 .row.collection {
     margin-bottom: 0;
-    background: lightgray;
-    color: blue;
+    background: #EEEEEE;
+    color: #115F98;
 }
 
+.collection .collection-item.avatar .title {
+    font-weight: bold;
+   
+}
+.col.s2.time {
+    font-size: 32px;
+    text-align: right;
+    transform: translateY(40%);
+    /* transform: translateX(25%); */
+}
+
+.col.s5.title {
+    margin-top: 15px;
+}
+.col.s5.doc {
+    color: gray;
+    margin-top: 15px;
+}
+
+.collection .collection-item {
+    background-color: #0089ec;
+    line-height: 1.5rem;
+    padding-top: 20px !important;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.collection .collection-item.avatar .circle {
+    position: absolute;
+    width: 49px !important;
+    height: 49px !important;
+    }
 </style>
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
@@ -219,70 +251,102 @@ h4.password {
 <section id="pass-entered">  
 <div class="container">
 
-
 <ul class="collection">
   <div class="row collection">
-    <div class="col s2">HELLO</div>
-    <div class="col s10">
-    <li class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle">
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      </li></div> 
+    <div class="col s2 time">:00</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Erik Bishop</div>
+      <div class="col s5 doc">Dr. Randy Pittman</div>
+      </div></li>
     </div>
 
-     <div class="row collection">
-    <div class="col s2">HELLO</div>
-    <div class="col s10">
-    <li class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle">
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      </li></div> 
+    <div class="row collection">
+    <div class="col s2 time">:15</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Lois Miles</div>
+      <div class="col s5 doc">Dr. Virgie Farmer</div>
+      </div></li>
     </div>
 
+    <div class="row collection">
+    <div class="col s2 time">:45</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Roxie James</div>
+      <div class="col s5 doc">Dr. Susie Patterson</div>
+      </div></li>
+    </div>
+ </ul>
 
-  </ul>
- <!-- <ul class="collection">
-  <div class="col s12">
-    <div class="col s2">HELLO</div>
-    <div class="col s2">
-    <li class="collection-item avatar">
-      <img src="images/yuna.jpg" alt="" class="circle">
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      </div>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
+<div class="row"> BREAK HERE </div>
+
+ <ul class="collection">
+  <div class="row collection">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Erik Bishop</div>
+      <div class="col s5 doc">Dr. Randy Pittman</div>
+      </div></li>
     </div>
 
-    <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle green">insert_chart</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    
-  </ul> -->
+    <div class="row collection">
+    <div class="col s2 time">:15</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Lois Miles</div>
+      <div class="col s5 doc">Dr. Virgie Farmer</div>
+      </div></li>
+    </div>
 
+    <div class="row collection">
+    <div class="col s2 time">:45</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Roxie James</div>
+      <div class="col s5 doc">Dr. Susie Patterson</div>
+      </div></li>
+    </div>
+    <div class="row collection">
+    <div class="col s2 time">:45</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Roxie James</div>
+      <div class="col s5 doc">Dr. Susie Patterson</div>
+      </div></li>
+    </div>
+    <div class="row collection">
+    <div class="col s2 time">:45</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Roxie James</div>
+      <div class="col s5 doc">Dr. Susie Patterson</div>
+      </div></li>
+    </div>
+    <div class="row collection">
+    <div class="col s2 time">:45</div>
+    <li class="collection-item avatar col s10">
+      <div class="col s9">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s5 title">Roxie James</div>
+      <div class="col s5 doc">Dr. Susie Patterson</div>
+      </div></li>
+    </div>
+ </ul>
 
 </div><!-- /.container -->
+
+
 </section>
 
 
