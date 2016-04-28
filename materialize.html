@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<title>Kiosks</title>
+<style>
+  @font-face {
+    font-family: "proximaNova-semiBold";
+    src: url('../kiosks/proximanova/proximanova-sbold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova-sbold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: "proximaNova-bold";
+    src: url('../kiosks/proximanova/proximanova-bold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.woff') format('woff');
+  }
+
+   @font-face {
+    font-family: "proximaNova-regular";
+    src: url('../kiosks/proximanova/proximanova-reg-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: "proximaNova-light";
+    src: url('../kiosks/proximanova/proximanova-light-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-light-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.woff') format('woff');
+  }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+  
+/* fix padding under menu after resize */
+/*@media screen and (max-width: 767px) {
+  body { padding-top: 75px; }
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+  body { padding-top: 150px; }
+}
+@media screen and (min-width: 992px) {
+  body { padding-top: 75px; }
+}*/
+
+
+html, body {
+  background: #6AC5FB !important;
+  color: white !important;
+  font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
+}
+nav {
+    background-color: #53B6F0 !important;
+    height: 11vh !important;
+    padding-top: 5vh !important;
+}
+
+.livewell {
+  width: 45vw;
+  padding-top: 2vh;
+  padding-left: 25px;
+  
+}
+.kioskbrand {
+  width: 22vw;
+  float: right;
+  padding-top: 2vh;
+  padding-right: 25px;
+}
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+h4.password {
+  font-family: 'proximaNova-light';
+  padding-top: 8vh;
+}
+
+
+.numbers {
+  font-family: 'proximaNova-light';
+  font-size: 30px;
+ /* height: 70vh;*/
+  width: 50vw;
+  display: inline-block;
+  color: #115F98;
+    
+}
+.row.num-btn {
+  padding-top: 6vh;
+}
+.btn-round {
+  background-color: transparent;
+  border-radius: 999em;
+  width: 95px;
+  height: 95px;
+  font-family: 'proximaNova-light';
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 15px;
+  border-style: solid;
+  border-color: #115F98;
+}
+.btn-round span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-20%);
+  color: #FFF;
+}
+.btn-round.text {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: transparent;
+  font-family: 'proximaNova-light';
+  font-size: 20px;
+}
+
+.collection {
+    /* margin: 0.5rem 0 1rem 0; */
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    /* padding-top: 0; */
+    /* padding-bottom: 0; */
+}
+.row.collection {
+    margin-bottom: 0;
+    background: lightgray;
+    color: blue;
+}
+
+</style>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+ <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="navbar-fixed"> 
+    <nav>
+      <div class="nav-wrapper">
+            <img class="livewell" src="living-well-white.svg" alt="livingwell">
+          <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#home">Home</a></li>    
+          </ul>       
+      </div>
+   </nav>
+</div>
+
+<section id="home">  
+<div class="container">
+    <div class="row row-centered">
+            <h4 class="password">Enter Passcode</h2> <li><a href="#pass-entered">Submit </a></li></h4>
+            <div class="numbers">
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+
+            <div class="row row-centered">
+              <div class="btn-round"><span>1</span></div>
+             <div class="btn-round"><span>2</span></div>
+            <div class="btn-round"><span>3</span></div>
+          
+             <div class="btn-round"><span>4</span></div>
+             <div class="btn-round"><span>5</span></div>
+            <div class="btn-round"><span>6</span></div>
+         
+            
+            <div class="btn-round"><span>7</span></div>
+            <div class="btn-round"><span>8</span></div>
+           <div class="btn-round"><span>9</span></div>
+        
+          <div class="btn-round text"><span></span></div>
+              <div class="btn-round"><span>0</span></div>
+             <div class="btn-round text"><span>DEL</span></div>     
+      </div>
+  </div>    <!-- //end numbers//      -->
+</div>
+<br>
+<br>
+</div>
+</div>
+</section>
+
+
+<section id="pass-entered">  
+<div class="container">
+
+
+<ul class="collection">
+  <div class="row collection">
+    <div class="col s2">HELLO</div>
+    <div class="col s10">
+    <li class="collection-item avatar">
+      <img src="images/avatar.jpeg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      </li></div> 
+    </div>
+
+     <div class="row collection">
+    <div class="col s2">HELLO</div>
+    <div class="col s10">
+    <li class="collection-item avatar">
+      <img src="images/avatar.jpeg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      </li></div> 
+    </div>
+
+
+  </ul>
+ <!-- <ul class="collection">
+  <div class="col s12">
+    <div class="col s2">HELLO</div>
+    <div class="col s2">
+    <li class="collection-item avatar">
+      <img src="images/yuna.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      </div>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    </div>
+
+    <li class="collection-item avatar">
+      <i class="material-icons circle">folder</i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    
+  </ul> -->
+
+
+</div><!-- /.container -->
+</section>
+
+
+
+</body>
+</html>                                   
