@@ -78,6 +78,9 @@ nav {
   padding-top: 2vh;
   padding-right: 25px;
 }
+section#home {
+    height: 100vh !important;
+}
 
 /* centered columns styles */
 .row-centered {
@@ -189,6 +192,30 @@ h4.password {
     width: 49px !important;
     height: 49px !important;
     }
+.col.s12.patient-checkin {
+    display: inline;
+    height: 50px;
+     color: #115F98;
+     padding: 15px;
+}
+.col.s6.hour {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.3rem;
+  display: inline-block;
+  clear: right;
+  padding-bottom: 10px;
+}
+.col.s6.booked-checked {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.2rem;
+    float: right;
+    display: inline;
+    clear: left;
+   
+}
+.col.s6.hour.addOn {
+    margin-top: 25px;
+}
 
 </style>
 
@@ -202,11 +229,11 @@ h4.password {
 <div class="navbar-fixed"> 
     <nav>
       <div class="nav-wrapper">
-            <img class="livewell" src="living-well-white.svg" alt="livingwell">
-          <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
-          <ul class="nav navbar-nav navbar-right">
+      <ul class="">
             <li class="active"><a href="#home">Home</a></li>    
-          </ul>       
+          </ul>
+          <img class="livewell" src="living-well-white.svg" alt="livingwell"> 
+          <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
       </div>
    </nav>
 </div>
@@ -253,6 +280,12 @@ h4.password {
 <section id="pass-entered">  
 <div class="container">
 
+<div class="col s12 patient-checkin">
+  <div class="col s6 hour">8 AM</div><span></span>
+  <div class="col s6 booked-checked"> <bold>127</bold> Booked | <strong>56</strong> Checked-In
+  </div>
+</div>
+
 <ul class="collection">
 
     <div class="row collection col s12">
@@ -288,7 +321,10 @@ h4.password {
 
  </ul>
 
-<div class="row"> BREAK HERE </div>
+
+<div class="col s12 patient-checkin">
+  <div class="col s6 hour addOn">9 AM</div><span></span>
+</div>
 
  <ul class="collection">
    <div class="row collection col s12">
@@ -371,18 +407,7 @@ h4.password {
       </div></li>
     </div>
 
-    <div class="row collection col s12">
-    <div class="col s2 time">:00</div>
-    <li class="collection-item col s10">
-      <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s3 patient">Erik Bishop</div>
-      <div class="col s3 doc">Dr. Randy Pittman</div>
-      </div></li>
-    </div>
-
-
-    
+   
  </ul>
 
 </div><!-- /.container -->
