@@ -101,15 +101,13 @@ h4.password {
 .numbers {
   font-family: 'proximaNova-light';
   font-size: 30px;
- /* height: 70vh;*/
+  height: 70vh;
   width: 50vw;
   display: inline-block;
   color: #115F98;
     
 }
-.row.num-btn {
-  padding-top: 6vh;
-}
+
 .btn-round {
   background-color: transparent;
   border-radius: 999em;
@@ -143,46 +141,45 @@ h4.password {
 }
 
 .collection {
-    /* margin: 0.5rem 0 1rem 0; */
     border: 1px solid #e0e0e0;
     border-radius: 0 !important;
     overflow: hidden;
     position: relative;
     margin-bottom: 0 !important;
     margin-top: 0 !important;
-    /* padding-top: 0; */
-    /* padding-bottom: 0; */
 }
 .row.collection {
     margin-bottom: 0;
-    background: #EEEEEE;
+    background: #F9F9F9;
     color: #115F98;
+    height: 70px;
+}
+.collection-item.avatar {
+    width: 680px !important;
 }
 
-.collection .collection-item.avatar .title {
-    font-weight: bold;
-   
-}
 .col.s2.time {
-    font-size: 32px;
-    text-align: right;
-    transform: translateY(40%);
-    /* transform: translateX(25%); */
+  font-family: "proximaNova-regular";   
+  font-size: 2.6rem;
+  text-align: right;
+  transform: translateY(40%);
+  max-width: 70px;
 }
 
-.col.s5.title {
-    margin-top: 15px;
-    font-size: 1.4rem;
+.col.s3.patient {
+  font-family: "proximaNova-semiBold";
+  margin-top: 15px;
+  font-size: 1.4rem;
 }
-.col.s5.doc {
-    color: gray;
+.col.s3.doc {
+  font-family: "proximaNova-semiBold";
+    color: #979797;
     margin-top: 15px;
     font-size: 1.2rem: 
 }
 
 .collection .collection-item {
     line-height: 1.5rem;
-    padding-top: 20px !important;
     margin: 0;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -192,6 +189,7 @@ h4.password {
     width: 49px !important;
     height: 49px !important;
     }
+
 </style>
 
  <!-- Compiled and minified JavaScript -->
@@ -227,26 +225,28 @@ h4.password {
               <div class="btn-round"><span>1</span></div>
              <div class="btn-round"><span>2</span></div>
             <div class="btn-round"><span>3</span></div>
-          
-             <div class="btn-round"><span>4</span></div>
+            </div>
+            <div class="row row-centered">
+              <div class="btn-round"><span>4</span></div>
              <div class="btn-round"><span>5</span></div>
             <div class="btn-round"><span>6</span></div>
+            </div>
+          <div class="row row-centered">
+              <div class="btn-round"><span>7</span></div>
+             <div class="btn-round"><span>8</span></div>
+            <div class="btn-round"><span>9</span></div>
+            </div>
          
-            
-            <div class="btn-round"><span>7</span></div>
-            <div class="btn-round"><span>8</span></div>
-           <div class="btn-round"><span>9</span></div>
-        
+        <div class="row row-centered">
           <div class="btn-round text"><span></span></div>
               <div class="btn-round"><span>0</span></div>
              <div class="btn-round text"><span>DEL</span></div>     
-      </div>
-  </div>    <!-- //end numbers//      -->
+        </div>
+    </div>    <!-- //end numbers//      -->
+</div>
 </div>
 <br>
 <br>
-</div>
-</div>
 </section>
 
 
@@ -254,96 +254,135 @@ h4.password {
 <div class="container">
 
 <ul class="collection">
-  <div class="row collection">
+
+    <div class="row collection col s12">
     <div class="col s2 time">:00</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Erik Bishop</div>
-      <div class="col s5 doc">Dr. Randy Pittman</div>
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
     </div>
 
-    <div class="row collection">
+    <div class="row collection col s12">
     <div class="col s2 time">:15</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Lois Miles</div>
-      <div class="col s5 doc">Dr. Virgie Farmer</div>
+      <div class="col s3 patient">Lois Miles</div>
+      <div class="col s3 doc">Dr. Virgie Farmer</div>
       </div></li>
     </div>
 
-    <div class="row collection">
+    <div class="row collection col s12">
     <div class="col s2 time">:45</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Roxie James</div>
-      <div class="col s5 doc">Dr. Susie Patterson</div>
+      <div class="col s3 patient">Roxie James</div>
+      <div class="col s3 doc">Dr. Susie Patterson</div>
       </div></li>
     </div>
+
+
  </ul>
 
 <div class="row"> BREAK HERE </div>
 
  <ul class="collection">
-  <div class="row collection">
+   <div class="row collection col s12">
     <div class="col s2 time">:00</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Erik Bishop</div>
-      <div class="col s5 doc">Dr. Randy Pittman</div>
+      <div class="col s3 patient">Edith Hicks</div>
+      <div class="col s3 doc">Dr. Aiden Owen</div>
       </div></li>
     </div>
 
-    <div class="row collection">
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s3 patient">Ronald Warner</div>
+      <div class="col s3 doc">Dr. Eunice Hunter</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
     <div class="col s2 time">:15</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Lois Miles</div>
-      <div class="col s5 doc">Dr. Virgie Farmer</div>
+      <div class="col s3 patient">Bradley Cohen</div>
+      <div class="col s3 doc">Dr. Addie Alvarado</div>
       </div></li>
     </div>
 
-    <div class="row collection">
-    <div class="col s2 time">:45</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+    <div class="row collection col s12">
+    <div class="col s2 time">:30</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Roxie James</div>
-      <div class="col s5 doc">Dr. Susie Patterson</div>
+      <div class="col s3 patient">Ida Burgess</div>
+      <div class="col s3 doc">Dr. Mildred Carr</div>
       </div></li>
     </div>
-    <div class="row collection">
-    <div class="col s2 time">:45</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:30</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Roxie James</div>
-      <div class="col s5 doc">Dr. Susie Patterson</div>
+      <div class="col s3 patient">Amanda Barnett</div>
+      <div class="col s3 doc">Dr. Herman Dennis</div>
       </div></li>
     </div>
-    <div class="row collection">
-    <div class="col s2 time">:45</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Roxie James</div>
-      <div class="col s5 doc">Dr. Susie Patterson</div>
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
     </div>
-    <div class="row collection">
+
+    <div class="row collection col s12">
     <div class="col s2 time">:45</div>
-    <li class="collection-item avatar col s10">
-      <div class="col s9">
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s5 title">Roxie James</div>
-      <div class="col s5 doc">Dr. Susie Patterson</div>
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
     </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
+      </div></li>
+    </div>
+
+
+    
  </ul>
 
 </div><!-- /.container -->
