@@ -59,11 +59,16 @@ html, body {
   color: white !important;
   font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
   font-size: 10px;
+  height: 100%;
 }
 nav {
     background-color: #53B6F0 !important;
     height: 11vh !important;
     padding-top: 5vh !important;
+}
+
+li.active.navHead {
+    background: none !important;
 }
 
 .livewell {
@@ -79,7 +84,8 @@ nav {
   padding-right: 25px;
 }
 section#home {
-    height: 100vh !important;
+  /*  height: 100%;*/
+    padding-top: 11vh;
 }
 
 /* centered columns styles */
@@ -202,7 +208,7 @@ h4.password {
   font-family: "proximaNova-semiBold";
   font-size: 1.3rem;
   display: inline-block;
-  clear: right;
+ /* clear: right;*/
   padding-bottom: 10px;
 }
 .col.s6.booked-checked {
@@ -210,7 +216,7 @@ h4.password {
   font-size: 1.2rem;
     float: right;
     display: inline;
-    clear: left;
+    /*clear: left;*/
    
 }
 .col.s6.hour.addOn {
@@ -229,10 +235,9 @@ h4.password {
 <div class="navbar-fixed"> 
     <nav>
       <div class="nav-wrapper">
-      <ul class="">
-            <li class="active"><a href="#home">Home</a></li>    
+      <ul>
+            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li>    
           </ul>
-          <img class="livewell" src="living-well-white.svg" alt="livingwell"> 
           <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
       </div>
    </nav>
