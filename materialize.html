@@ -83,6 +83,10 @@ li.active.navHead {
   padding-top: 2vh;
   padding-right: 25px;
 }
+
+.container {
+  position: relative;
+}
 section#home {
   /*  height: 100%;*/
     padding-top: 11vh;
@@ -149,6 +153,10 @@ h4.password {
   font-size: 20px;
 }
 
+section#pass-entered {
+    height: 100%;
+    padding-top: 15vh;
+}
 .collection {
     border: 1px solid #e0e0e0;
     border-radius: 0 !important;
@@ -223,6 +231,25 @@ h4.password {
     margin-top: 25px;
 }
 
+section#patient {
+    height: 100%;
+    padding-top: 15vh;
+}
+
+.card-content.info {
+    background: #F9F9F9;
+    color: black;
+}
+.card-content.top {
+    background: pink;
+}
+/*.relative-center {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+*/
 </style>
 
  <!-- Compiled and minified JavaScript -->
@@ -281,24 +308,24 @@ h4.password {
 <br>
 </section>
 
-
+<!-- #Pass Entered Section -->
 <section id="pass-entered">  
 <div class="container">
 
 <div class="col s12 patient-checkin">
-  <div class="col s6 hour">8 AM</div><span></span>
-  <div class="col s6 booked-checked"> <bold>127</bold> Booked | <strong>56</strong> Checked-In
-  </div>
+  <div class="col s6 hour">8 AM</div>
+  <div class="col s6 booked-checked"><strong>127</strong> Booked | <strong>56</strong> Checked-In</div>
 </div>
 
 <ul class="collection">
-
     <div class="row collection col s12">
     <div class="col s2 time">:00</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
       <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 patient">Erik Bishop
+       <a href="#patient">Patient Click </a>
+      </div>
       <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
     </div>
@@ -322,7 +349,6 @@ h4.password {
       <div class="col s3 doc">Dr. Susie Patterson</div>
       </div></li>
     </div>
-
 
  </ul>
 
@@ -416,11 +442,50 @@ h4.password {
  </ul>
 
 </div><!-- /.container -->
-
-
 </section>
 
 
+
+<!-- #Pass Entered Section END -->
+
+<!-- #patient Section -->
+<section id="patient">  
+<div class="container">
+
+  <div class="row collection col s12">    
+      <div class="collection-item col s12">
+        <div class="collection-item avatar">
+        <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+        <div class="col s3 patient">Bradley Cohen</div>
+        <div class="col s3 doc">Dr. Addie Alvarado</div>
+        </div></div>
+    </div>
+
+<div class="row">
+            <div class="card-content info">
+            <div class="row">
+             <div class="col s4">Sm-4</div>
+             <div class="col s4">Sm-4</div>
+             <div class="col s4">Sm-4</div>
+             <div class="col s12 text center">THis is the Centered Button verify</div>
+            
+            </div><!-- end row panel -->
+            </div> <!-- end card=action -->
+
+          </div> <!-- end 2nd row -->
+        
+
+</div><!-- /.container -->
+</section>
+
+
+ <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
+
+<!-- #Pass Entered Section END -->
 
 </body>
 </html>                                   
