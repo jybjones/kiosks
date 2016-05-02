@@ -236,13 +236,66 @@ section#patient {
     padding-top: 15vh;
 }
 
-.card-content.info {
+/*.card-content.info {
     background: #F9F9F9;
     color: black;
+}*/
+
+.row.collection.col.s12.patient-detail {
+    width: 680px;
+    height: 341px;
+    background: #F9F9F9;
 }
-.card-content.top {
-    background: pink;
+/*.row.text.center {
+    height: 230px;
+    background: purple;
 }
+*/
+.col.s4.personal-detail {
+    height: 115px;
+    width: 214px;
+     font-family: "proximaNova-semiBold";
+    border-style: solid;
+     margin-top: 15px;
+     border-color: #E3E3E3;
+     border-style: solid;
+     border-width: .5px;
+     font-size: 1.2rem;
+     color: #666666;
+}
+.row .col.s4 {
+    width: 214px;
+    margin-left: auto;
+    border-width: .5px;
+    border-style: solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: -25px;
+}
+.col.s4.appt-time {
+    margin-left: 15px;
+}
+
+.col.s3.patient-big {
+  font-family: "proximaNova-semiBold";
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+
+.col.s3.doc-big {
+    float: right;
+    font-family: "proximaNova-semiBold";
+    color: #666666;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+span.appt-details {
+   font-family: "proximaNova-regular";
+    color: #979797;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
 /*.relative-center {
   position: relative;
   left: 50%;
@@ -452,27 +505,34 @@ section#patient {
 <section id="patient">  
 <div class="container">
 
-  <div class="row collection col s12">    
+  <div class="row collection col s12 patient-detail">    
       <div class="collection-item col s12">
         <div class="collection-item avatar">
-        <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
-        <div class="col s3 patient">Bradley Cohen</div>
-        <div class="col s3 doc">Dr. Addie Alvarado</div>
-        </div></div>
+        <img src="images/avatar.jpeg" class="circle bigger">
+        <div class="col s3 patient-big">Erik Bishop</div>
+        <div class="col s3 doc-big">Dr. Randy Pittman <br> <span class="appt-details"> Primary Care </span></div>
+        </div>
+      </div>
+<!-- 
+         --><!-- <div class="card-content"> -->
+      <div class="row text center">
+           <div class="col s4 personal-detail appt-time">APPOINTMENT TIME <br> <span class="appt-details">08:00 AM</span></div>
+           <div class="col s4 personal-detail dob ">DOB <br> <span class="appt-details">08:00 AM</span></div>
+           <div class="col s4 personal-detail idNnum ">ID NUMBER <br> <span class="appt-details">08:00 AM</span></div>
+           
+           
+      </div><!-- end row text center -->
+     <div class="row bigBtn col s12">
+           BUTTON HERE <br> 
     </div>
+        <!--  <div class="row"> -->
+           <!-- <div class="col s12 verify-row text center">THis is the Centered Button verify</div> -->
+          <!--  </div> -->
+     <!--  </div> --> <!-- end row center -->
 
-<div class="row">
-            <div class="card-content info">
-            <div class="row">
-             <div class="col s4">Sm-4</div>
-             <div class="col s4">Sm-4</div>
-             <div class="col s4">Sm-4</div>
-             <div class="col s12 text center">THis is the Centered Button verify</div>
-            
-            </div><!-- end row panel -->
-            </div> <!-- end card=action -->
+    <!-- </div> --> <!-- end patient detail row --> 
 
-          </div> <!-- end 2nd row -->
+
         
 
 </div><!-- /.container -->
