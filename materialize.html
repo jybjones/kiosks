@@ -59,12 +59,14 @@ html, body {
   color: white !important;
   font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
   font-size: 10px;
-  height: 100%;
+  position: relative;
+  margin: 0;
 }
 nav {
     background-color: #53B6F0 !important;
     height: 11vh !important;
     padding-top: 5vh !important;
+    height: 111px;
 }
 
 li.active.navHead {
@@ -205,10 +207,6 @@ img.circle.bigger {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.collection .collection-item.avatar .circle {
-   /* width: 49px !important;
-    height: 49px !important;*/
-    }
 .col.s12.patient-checkin {
     display: inline;
     height: 50px;
@@ -237,9 +235,8 @@ img.circle.bigger {
 /*<!-- SECTION PATIENT -->*/
 
 section#patient {
-    height: 728px;
-    padding-top: 0;
-    margin-top: 12vh;
+    height: 100%;
+    padding-top: 15vh;
 }
 
 /*.card-content.info {
@@ -327,6 +324,14 @@ button.btn.col.s12 {
     color: #6ECDB2;
     box-shadow: none;
 }
+button.btn.col.s12:active, .btn-large:active {
+    background-color: #6ECDB2;
+}
+
+button.btn.col.s12  a:active {
+    color: #fff;
+    background: #3cafe2;
+}
 
 .col.s6.patient-title {
    font-family: "proximaNova-semiBold";
@@ -369,7 +374,33 @@ img.sm-forms {
     padding-top: 15px;
     margin-top: 44px;
 }
+.status.s4.incomplete {
+    background: #F9F9F9;
+    color: #979797;
+    border: 0.2px solid #EEEEEE;
+}
+.status.s4.incomplete.stat {
+  background-image:
+    linear-gradient(
+      to right,  
+    #EEEEEE 25%,
+     #F9F9F9 25%    
+    );
+}
 
+
+/*<!-- SECTION PATIENT -->*/
+
+section#consent-form {
+   height: 100%;
+    padding-top: 15vh;
+    background: #FFFFFF;
+    color:#666666;
+
+}
+
+ 
+/*/////FOOTER////*/
 footer.footer {
   font-family: "proximaNova-semiBold";
     background: #F7774A;
@@ -378,17 +409,13 @@ footer.footer {
     text-align: center;
 }
 
+
 p.footer-text {
     text-align: center;
     transform: translateY(100%);
 }
-/*.relative-center {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-*/
+
+
 </style>
 
  <!-- Compiled and minified JavaScript -->
@@ -403,7 +430,7 @@ p.footer-text {
       <div class="nav-wrapper">
       <ul>
             <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li>    
-          </ul>
+      </ul>
           <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
       </div>
    </nav>
@@ -583,6 +610,7 @@ p.footer-text {
 </div><!-- /.container -->
 </section>
 
+
 <!-- #Pass Entered Section END -->
 
 <!-- #patient Section -->
@@ -606,9 +634,10 @@ p.footer-text {
            
       </div><!-- end row text center -->
       <div class="row button col s12">
-           <button class="btn col s12">VERIFY</button>
+            <a href="#consent-form"><button class="btn col s12" href="#consent-form">VERIFY</button></a>
       </div>
   </div>
+
 <div class="col s6 patient-title">Patient Forms </div>
   <div class="row col s12 text center">
 
@@ -628,7 +657,7 @@ p.footer-text {
           <span class="card-title">Consent to Care</span>
         </div>
         <img src="images/consent form img.svg" class="sm-forms">
-        <div class="status s4">Incomplete</div>
+        <div class="status s4 incomplete">Incomplete</div>
       </div>
     </div>
     <div class="col s4 patient-forms">
@@ -637,7 +666,7 @@ p.footer-text {
           <span class="card-title">Intake</span>
         </div>
         <img src="images/intake form img.svg" class="sm-forms">
-        <div class="status s4"> 25% Complete</div>
+        <div class="status s4 incomplete stat"> 25% Complete</div>
       </div>
     </div>
 
@@ -646,15 +675,49 @@ p.footer-text {
 </div>
 
 </div><!-- /.container -->
-</section>
-<footer class="footer">
-      <div class="container">
-        <p class="footer-text">LAUNCH FORMS</p>
-      </div>
+<footer class="footer"> 
+      <p class="footer-text" href="#consent-form">Launch Forms</p>
+        <a href="#consent-form">Consent Form </a>
+        
 </footer>
+</section>
+
 
 
 <!-- #Pass Entered Section END -->
 
+<!-- #Consent Form -->
+<section id="consent-form"> 
+<div class="container">  
+    <p>Treatment and Medication History Consent and Patient Acknowledgment of the Notice of Privacy practices and Consent to Use and Disclose Health Information.</p>
+<p>
+  I consent to all necessary steps taken for examination, diagnosis and treatment. If at any time I have questions about my examination, diagnosis, or treatment, I will not proceed until my questions have been answered so that I am fully informed. I understand that giving the providers and nurses all relevant information is important to my proper diagnosis and treatment. I understand complete compliance with my provider's instructions is critical to the success of any treatment prescribed.</p>
+
+<p>If required by law, I acknowledge that I was provided with an opportunity of a copy of the Premise Health Notice of Privacy Practices regarding uses and disclosures of information regarding me and my health (“Health Information”). I hereby consent to the use and disclosure of my health information, for the purposes and activities permitted under the federal privacy and state privacy laws, which are described in the Premise Health Notice of Privacy Practices.
+I specifically authorize the release, to the fullest extent permitted by law, for treatment, payment or operations purposes as described in the Notice of Privacy Practices, of information regarding the results of any HIV/AIDS testing or treatment, mental health treatment and substance abuse treatment.</p>
+
+<p>I authorize Premise Health to release my health information to my health plan or to a health and wellness provider approved by my health plan for purposes of advising me concerning appropriate measures to maintain or improve my health or any condition reflected in my records.
+I authorize Premise Health to release information to my designated insurance plan for the purpose of health plan administration, including receiving or making payment for services rendered on my behalf. I understand a patient is responsible for all charges incurred, subject to contract and program rules, regardless of my insurance status. If it becomes necessary to send this account to collections, the patient will be responsible for all additional charges.</p>
+
+<p> I have read and do understand the above information.</p>
+
+</div> <!-- end container -->
+<footer class="footer">
+      
+      <p class="footer-text" href="#consent-form">Agree</p>
+      
+</footer>
+</section><!-- #Consent Form end section -->
+
+
+<!-- END# Consent Form -->
+
 </body>
+
+<script type="text/javascript">
+    // var displayCustomHTMLToast = function () {
+    //   var $toastContent = $('<span>I am toast content</span>');
+    //   Materialize.toast($toastContent, 5000);
+    }
+  </script>
 </html>                                   
