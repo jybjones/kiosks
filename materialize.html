@@ -72,13 +72,13 @@ li.active.navHead {
 }
 
 .livewell {
-  width: 45vw;
+  width: 47vw;
   padding-top: 2vh;
   padding-left: 25px;
   
 }
 .kioskbrand {
-  width: 22vw;
+  width: 26vw;
   float: right;
   padding-top: 2vh;
   padding-right: 25px;
@@ -174,6 +174,10 @@ section#pass-entered {
 .collection-item.avatar {
     width: 680px !important;
 }
+img.circle.bigger {
+    width: 75px !important;
+    height: 75px !important;
+}
 
 .col.s2.time {
   font-family: "proximaNova-regular";   
@@ -202,9 +206,8 @@ section#pass-entered {
 }
 
 .collection .collection-item.avatar .circle {
-    position: absolute;
-    width: 49px !important;
-    height: 49px !important;
+   /* width: 49px !important;
+    height: 49px !important;*/
     }
 .col.s12.patient-checkin {
     display: inline;
@@ -231,9 +234,12 @@ section#pass-entered {
     margin-top: 25px;
 }
 
+/*<!-- SECTION PATIENT -->*/
+
 section#patient {
-    height: 100%;
-    padding-top: 15vh;
+    height: 728px;
+    padding-top: 0;
+    margin-top: 12vh;
 }
 
 /*.card-content.info {
@@ -246,23 +252,37 @@ section#patient {
     height: 341px;
    /*height: auto;*/
     background: #F9F9F9;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16) ,0 2px 10px 0 rgba(0,0,0,0.12);
 }
+
 /*.row.text.center {
     height: 230px;
     background: purple;
 }
 */
+
+.row.col.s12.text.center {
+    width: 678px;
+    height: 294px;
+}
+
+.collection-item.avatar.patient {
+    height: 111px;
+    width: 680px;
+}
 .col.s4.personal-detail {
     height: 115px;
     width: 214px;
      font-family: "proximaNova-semiBold";
     border-style: solid;
      margin-top: 15px;
+    padding-top: 5%;
      border-color: #E3E3E3;
      border-style: solid;
      border-width: .5px;
      font-size: 1.2rem;
      color: #666666;
+     
 }
 .row .col.s4 {
     width: 214px;
@@ -281,6 +301,7 @@ section#patient {
   font-family: "proximaNova-semiBold";
   margin-top: 15px;
   font-size: 1.8rem;
+  text-align: right;
 }
 
 .col.s3.doc-big {
@@ -307,22 +328,59 @@ button.btn.col.s12 {
     box-shadow: none;
 }
 
+.col.s6.patient-title {
+   font-family: "proximaNova-semiBold";
+    font-size: 1.4rem;
+    margin-top: 25px;
+    color: #115F98;
+}
+.row.col.s12.text.center {
+    width: 680px;
+}
 .col.s4.patient-forms {
     height: 294px;
     width: 216px;
-    margin: 0 auto;
-    display: flex;
-    margin-left: 6px;
-    margin-top: 50px;
+    padding: 0;
     border: none;
+}
+.card-content.title {
+     font-family: "proximaNova-semiBold";
+    font-size: 1.3rem;
+    color: #115F98;
+    padding-top: 20px;
+}
+img.sm-forms {
+    height: 115px;
+    width: 86px;
+    margin-top: 50px;
+}
+.card-panel.small {
+    height: 294px;
+    width: 216px;
+    padding: 0;
+}
+.status.s4 {
+    font-family: "proximaNova-semiBold";
+    font-size: 1.2rem;
+  /*  color: #FFFFFFF;*/
+    background: #82D5BD;
+    width: 216px;
+    height: 44px;
+    padding-top: 15px;
+    margin-top: 44px;
 }
 
 footer.footer {
+  font-family: "proximaNova-semiBold";
     background: #F7774A;
     height: 70px;
-    font-family: "proximaNova-semiBold";
-  font-size: 1.5rem;
+    font-size: 1.5rem;
     text-align: center;
+}
+
+p.footer-text {
+    text-align: center;
+    transform: translateY(100%);
 }
 /*.relative-center {
   position: relative;
@@ -403,7 +461,7 @@ footer.footer {
     <div class="col s2 time">:00</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Erik Bishop
        <a href="#patient">Patient Click </a>
       </div>
@@ -415,7 +473,7 @@ footer.footer {
     <div class="col s2 time">:15</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Lois Miles</div>
       <div class="col s3 doc">Dr. Virgie Farmer</div>
       </div></li>
@@ -425,7 +483,7 @@ footer.footer {
     <div class="col s2 time">:45</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Roxie James</div>
       <div class="col s3 doc">Dr. Susie Patterson</div>
       </div></li>
@@ -443,7 +501,7 @@ footer.footer {
     <div class="col s2 time">:00</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Edith Hicks</div>
       <div class="col s3 doc">Dr. Aiden Owen</div>
       </div></li>
@@ -453,7 +511,7 @@ footer.footer {
     <div class="col s2 time">:00</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg"class="circle">
       <div class="col s3 patient">Ronald Warner</div>
       <div class="col s3 doc">Dr. Eunice Hunter</div>
       </div></li>
@@ -463,7 +521,7 @@ footer.footer {
     <div class="col s2 time">:15</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg"class="circle">
       <div class="col s3 patient">Bradley Cohen</div>
       <div class="col s3 doc">Dr. Addie Alvarado</div>
       </div></li>
@@ -473,7 +531,7 @@ footer.footer {
     <div class="col s2 time">:30</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle ">
       <div class="col s3 patient">Ida Burgess</div>
       <div class="col s3 doc">Dr. Mildred Carr</div>
       </div></li>
@@ -483,7 +541,7 @@ footer.footer {
     <div class="col s2 time">:30</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Amanda Barnett</div>
       <div class="col s3 doc">Dr. Herman Dennis</div>
       </div></li>
@@ -493,7 +551,7 @@ footer.footer {
     <div class="col s2 time">:00</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Erik Bishop</div>
       <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
@@ -503,7 +561,7 @@ footer.footer {
     <div class="col s2 time">:45</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Erik Bishop</div>
       <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
@@ -513,7 +571,7 @@ footer.footer {
     <div class="col s2 time">:00</div>
     <li class="collection-item col s10">
       <div class="collection-item avatar">
-      <img src="images/avatar.jpeg" alt="" class="circle responsive-img">
+      <img src="images/avatar.jpeg" class="circle">
       <div class="col s3 patient">Erik Bishop</div>
       <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
@@ -525,90 +583,76 @@ footer.footer {
 </div><!-- /.container -->
 </section>
 
-
-
 <!-- #Pass Entered Section END -->
 
 <!-- #patient Section -->
 <section id="patient">  
+<!-- <i class="material-icons">chevron_right</i> -->
 <div class="container">
-
   <div class="row collection col s12 patient-detail">    
       <div class="collection-item col s12">
-        <div class="collection-item avatar">
+        <div class="collection-item avatar patient">
         <img src="images/avatar.jpeg" class="circle bigger">
         <div class="col s3 patient-big">Erik Bishop</div>
         <div class="col s3 doc-big">Dr. Randy Pittman <br> <span class="appt-details"> Primary Care </span></div>
         </div>
       </div>
-<!-- 
-         --><!-- <div class="card-content"> -->
+      <!-- <div class="card-content"> -->
       <div class="row text center">
-           <div class="col s4 personal-detail appt-time">APPOINTMENT TIME <br> <span class="appt-details">08:00 AM</span></div>
-           <div class="col s4 personal-detail dob ">DOB <br> <span class="appt-details">08:00 AM</span></div>
-           <div class="col s4 personal-detail idNnum ">ID NUMBER <br> <span class="appt-details">08:00 AM</span></div>
+           <div class="col s4 personal-detail appt-time">APPOINTMENT TIME <br><span class="appt-details">08:00 AM</span></div>
+           <div class="col s4 personal-detail dob ">DOB <br> <span class="appt-details">11/14/1983</span></div>
+           <div class="col s4 personal-detail idNnum ">ID NUMBER <br> <span class="appt-details">448-21-0891</span></div>
            
            
       </div><!-- end row text center -->
       <div class="row button col s12">
            <button class="btn col s12">VERIFY</button>
       </div>
+  </div>
+<div class="col s6 patient-title">Patient Forms </div>
+  <div class="row col s12 text center">
 
-</div>
-<div class="row text center">
-        <div class="col s4 patient-forms">
-          <div class="card-panel">
-            <div class="card-content black-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href='#'>This is a link</a>
-            </div>
-          </div>
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">HIPAA</span>
         </div>
-
-         <div class="col s4 patient-forms">
-          <div class="card-panel">
-            <div class="card-content black-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href='#'>This is a link</a>
-            </div>
-          </div>
+        <img src="images/consent form img.svg" class="sm-forms">
+        <div class="status s4">Signed</div>
+      </div>
+    </div>
+   
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">Consent to Care</span>
         </div>
-         <div class="col s4 patient-forms">
-          <div class="card-panel">
-            <div class="card-content black-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href='#'>This is a link</a>
-            </div>
-          </div>
+        <img src="images/consent form img.svg" class="sm-forms">
+        <div class="status s4">Incomplete</div>
+      </div>
+    </div>
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">Intake</span>
         </div>
+        <img src="images/intake form img.svg" class="sm-forms">
+        <div class="status s4"> 25% Complete</div>
+      </div>
+    </div>
 
 
 
 </div>
+
 </div><!-- /.container -->
 </section>
-
-
- <footer class="footer">
+<footer class="footer">
       <div class="container">
-        <p class="text-muted">LAUNCH FORMS</p>
+        <p class="footer-text">LAUNCH FORMS</p>
       </div>
-    </footer>
+</footer>
+
 
 <!-- #Pass Entered Section END -->
 
