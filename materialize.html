@@ -388,6 +388,10 @@ img.sm-forms {
     );
 }
 
+.container{
+  height: 100vh;
+  overflow: scroll;
+}
 
 /*<!-- SECTION PATIENT -->*/
 
@@ -398,7 +402,14 @@ section#consent-form {
     color:#666666;
 
 }
-
+section#consent-form {
+    height: 100%;
+    padding-top: 15vh;
+    background: #FFFFFF;
+    color: #666666;
+    z-index: 9999;
+    position: relative;
+}
  
 /*/////FOOTER////*/
 footer.footer {
@@ -407,6 +418,9 @@ footer.footer {
     height: 70px;
     font-size: 1.5rem;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -429,7 +443,7 @@ p.footer-text {
     <nav>
       <div class="nav-wrapper">
       <ul>
-            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li>    
+            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li> 
       </ul>
           <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
       </div>
@@ -614,7 +628,7 @@ p.footer-text {
 <!-- #Pass Entered Section END -->
 
 <!-- #patient Section -->
-<section id="patient">  
+<section id="patient">   
 <!-- <i class="material-icons">chevron_right</i> -->
 <div class="container">
   <div class="row collection col s12 patient-detail">    
@@ -635,6 +649,7 @@ p.footer-text {
       </div><!-- end row text center -->
       <div class="row button col s12">
             <a href="#consent-form"><button class="btn col s12" href="#consent-form">VERIFY</button></a>
+            <!-- <input type="button" value="Verify Input" onclick="window.location.href='materialize.html#consent-form';"> -->
       </div>
   </div>
 
@@ -673,13 +688,13 @@ p.footer-text {
 
 
 </div>
-
-</div><!-- /.container -->
 <footer class="footer"> 
       <p class="footer-text" href="#consent-form">Launch Forms</p>
         <a href="#consent-form">Consent Form </a>
-        
+
 </footer>
+</div><!-- /.container -->
+
 </section>
 
 
@@ -688,7 +703,7 @@ p.footer-text {
 
 <!-- #Consent Form -->
 <section id="consent-form"> 
-<div class="container">  
+<div class="container consent-form">  
     <p>Treatment and Medication History Consent and Patient Acknowledgment of the Notice of Privacy practices and Consent to Use and Disclose Health Information.</p>
 <p>
   I consent to all necessary steps taken for examination, diagnosis and treatment. If at any time I have questions about my examination, diagnosis, or treatment, I will not proceed until my questions have been answered so that I am fully informed. I understand that giving the providers and nurses all relevant information is important to my proper diagnosis and treatment. I understand complete compliance with my provider's instructions is critical to the success of any treatment prescribed.</p>
