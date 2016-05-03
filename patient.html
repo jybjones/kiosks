@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<title>Kiosks</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<style>
+  @font-face {
+    font-family: "proximaNova-semiBold";
+    src: url('../kiosks/proximanova/proximanova-sbold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova-sbold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: "proximaNova-bold";
+    src: url('../kiosks/proximanova/proximanova-bold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.woff') format('woff');
+  }
+
+   @font-face {
+    font-family: "proximaNova-regular";
+    src: url('../kiosks/proximanova/proximanova-reg-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: "proximaNova-light";
+    src: url('../kiosks/proximanova/proximanova-light-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-light-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.woff') format('woff');
+  }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+  
+/* fix padding under menu after resize */
+/*@media screen and (max-width: 767px) {
+  body { padding-top: 75px; }
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+  body { padding-top: 150px; }
+}
+@media screen and (min-width: 992px) {
+  body { padding-top: 75px; }
+}*/
+
+
+html, body {
+  background: #6AC5FB !important;
+  color: white !important;
+  font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  position: relative;
+  margin: 0;
+}
+nav {
+    background-color: #53B6F0 !important;
+    height: 11vh !important;
+    padding-top: 5vh !important;
+    height: 111px;
+}
+
+li.active.navHead {
+    background: none !important;
+}
+
+.livewell {
+  width: 47vw;
+  padding-top: 2vh;
+  padding-left: 25px;
+  
+}
+.kioskbrand {
+  width: 26vw;
+  float: right;
+  padding-top: 2vh;
+  padding-right: 25px;
+}
+
+.container {
+  position: relative;
+}
+section#home {
+  /*  height: 100%;*/
+    padding-top: 11vh;
+}
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+h4.password {
+  font-family: 'proximaNova-light';
+  padding-top: 8vh;
+}
+
+
+.numbers {
+  font-family: 'proximaNova-light';
+  font-size: 30px;
+  height: 70vh;
+  width: 50vw;
+  display: inline-block;
+  color: #115F98;
+    
+}
+
+.btn-round {
+  background-color: transparent;
+  border-radius: 999em;
+  width: 95px;
+  height: 95px;
+  font-family: 'proximaNova-light';
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 15px;
+  border-style: solid;
+  border-color: #115F98;
+}
+.btn-round span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-20%);
+  color: #FFF;
+}
+.btn-round.text {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: transparent;
+  font-family: 'proximaNova-light';
+  font-size: 20px;
+}
+
+section#pass-entered {
+    height: 100%;
+    padding-top: 15vh;
+}
+.collection {
+    border: 1px solid #e0e0e0;
+    border-radius: 0 !important;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+.row.collection {
+    margin-bottom: 0;
+    background: #F9F9F9;
+    color: #115F98;
+    height: 70px;
+}
+.collection-item.avatar {
+    width: 680px !important;
+}
+img.circle.bigger {
+    width: 75px !important;
+    height: 75px !important;
+}
+
+.col.s2.time {
+  font-family: "proximaNova-regular";   
+  font-size: 2.6rem;
+  text-align: right;
+  transform: translateY(40%);
+  max-width: 70px;
+}
+
+.col.s3.patient {
+  font-family: "proximaNova-semiBold";
+  margin-top: 15px;
+  font-size: 1.4rem;
+}
+.col.s3.doc {
+  font-family: "proximaNova-semiBold";
+    color: #979797;
+    margin-top: 15px;
+    font-size: 1.2rem: 
+}
+
+.collection .collection-item {
+    line-height: 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.col.s12.patient-checkin {
+    display: inline;
+    height: 50px;
+     color: #115F98;
+     padding: 15px;
+}
+.col.s6.hour {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.3rem;
+  display: inline-block;
+ /* clear: right;*/
+  padding-bottom: 10px;
+}
+.col.s6.booked-checked {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.2rem;
+    float: right;
+    display: inline;
+    /*clear: left;*/
+   
+}
+.col.s6.hour.addOn {
+    margin-top: 25px;
+}
+
+/*<!-- SECTION PATIENT -->*/
+
+section#patient {
+    height: 100%;
+    padding-top: 15vh;
+}
+
+/*.card-content.info {
+    background: #F9F9F9;
+    color: black;
+}*/
+
+.row.collection.col.s12.patient-detail {
+    width: 680px;
+    height: 341px;
+   /*height: auto;*/
+    background: #F9F9F9;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16) ,0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+/*.row.text.center {
+    height: 230px;
+    background: purple;
+}
+*/
+
+.row.col.s12.text.center {
+    width: 678px;
+    height: 294px;
+}
+
+.collection-item.avatar.patient {
+    height: 111px;
+    width: 680px;
+}
+.col.s4.personal-detail {
+    height: 115px;
+    width: 214px;
+     font-family: "proximaNova-semiBold";
+    border-style: solid;
+     margin-top: 15px;
+    padding-top: 5%;
+     border-color: #E3E3E3;
+     border-style: solid;
+     border-width: .5px;
+     font-size: 1.2rem;
+     color: #666666;
+     
+}
+.row .col.s4 {
+    width: 214px;
+    margin-left: auto;
+    border-width: .5px;
+    border-style: solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: -25px;
+}
+.col.s4.appt-time {
+    margin-left: 15px;
+}
+
+.col.s3.patient-big {
+  font-family: "proximaNova-semiBold";
+  margin-top: 15px;
+  font-size: 1.8rem;
+  text-align: right;
+}
+
+.col.s3.doc-big {
+    float: right;
+    font-family: "proximaNova-semiBold";
+    color: #666666;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+span.appt-details {
+   font-family: "proximaNova-regular";
+    color: #979797;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+button.btn.col.s12 {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.4rem;
+    height: 50px;
+    background: transparent;
+    border-color: #6ECDB2;
+    border-style: solid;
+    color: #6ECDB2;
+    box-shadow: none;
+}
+button.btn.col.s12:active, .btn-large:active {
+    background-color: #6ECDB2;
+}
+
+button.btn.col.s12  a:active {
+    color: #fff;
+    background: #3cafe2;
+}
+
+.col.s6.patient-title {
+   font-family: "proximaNova-semiBold";
+    font-size: 1.4rem;
+    margin-top: 25px;
+    color: #115F98;
+}
+.row.col.s12.text.center {
+    width: 680px;
+}
+.col.s4.patient-forms {
+    height: 294px;
+    width: 216px;
+    padding: 0;
+    border: none;
+}
+.card-content.title {
+     font-family: "proximaNova-semiBold";
+    font-size: 1.3rem;
+    color: #115F98;
+    padding-top: 20px;
+}
+img.sm-forms {
+    height: 115px;
+    width: 86px;
+    margin-top: 50px;
+}
+.card-panel.small {
+    height: 294px;
+    width: 216px;
+    padding: 0;
+}
+.status.s4 {
+    font-family: "proximaNova-semiBold";
+    font-size: 1.2rem;
+  /*  color: #FFFFFFF;*/
+    background: #82D5BD;
+    width: 216px;
+    height: 44px;
+    padding-top: 15px;
+    margin-top: 44px;
+}
+.status.s4.incomplete {
+    background: #F9F9F9;
+    color: #979797;
+    border: 0.2px solid #EEEEEE;
+}
+.status.s4.incomplete.stat {
+  background-image:
+    linear-gradient(
+      to right,  
+    #EEEEEE 25%,
+     #F9F9F9 25%    
+    );
+}
+
+.container{
+  height: 100vh;
+  overflow: scroll;
+}
+
+/*<!-- SECTION PATIENT -->*/
+
+section#consent-form {
+   height: 100%;
+    padding-top: 15vh;
+    background: #FFFFFF;
+    color:#666666;
+
+}
+section#consent-form {
+    height: 100%;
+    padding-top: 15vh;
+    background: #FFFFFF;
+    color: #666666;
+    z-index: 9999;
+    position: relative;
+}
+ 
+/*/////FOOTER////*/
+footer.footer {
+  font-family: "proximaNova-semiBold";
+    background: #F7774A;
+    height: 70px;
+    font-size: 1.5rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+p.footer-text {
+    text-align: center;
+    transform: translateY(100%);
+}
+
+
+</style>
+
+ <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="navbar-fixed"> 
+    <nav>
+      <div class="nav-wrapper">
+      <ul>
+            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li> 
+      </ul>
+          <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
+      </div>
+   </nav>
+</div>
+
+<section id="home">  
+<div class="container">
+    <div class="row row-centered">
+            <h4 class="password">Enter Passcode</h2> <li><a href="#pass-entered">Submit </a></li></h4>
+            <div class="numbers">
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+              <i class="material-icons md-36">radio_button_unchecked</i>
+
+            <div class="row row-centered">
+              <div class="btn-round"><span>1</span></div>
+             <div class="btn-round"><span>2</span></div>
+            <div class="btn-round"><span>3</span></div>
+            </div>
+            <div class="row row-centered">
+              <div class="btn-round"><span>4</span></div>
+             <div class="btn-round"><span>5</span></div>
+            <div class="btn-round"><span>6</span></div>
+            </div>
+          <div class="row row-centered">
+              <div class="btn-round"><span>7</span></div>
+             <div class="btn-round"><span>8</span></div>
+            <div class="btn-round"><span>9</span></div>
+            </div>
+         
+        <div class="row row-centered">
+          <div class="btn-round text"><span></span></div>
+              <div class="btn-round"><span>0</span></div>
+             <div class="btn-round text"><span>DEL</span></div>     
+        </div>
+    </div>    <!-- //end numbers//      -->
+</div>
+</div>
+<br>
+<br>
+</section>
+
+<!-- #Pass Entered Section -->
+<section id="pass-entered">  
+<div class="container">
+
+<div class="col s12 patient-checkin">
+  <div class="col s6 hour">8 AM</div>
+  <div class="col s6 booked-checked"><strong>127</strong> Booked | <strong>56</strong> Checked-In</div>
+</div>
+
+<ul class="collection">
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Erik Bishop
+       <a href="#patient">Patient Click </a>
+      </div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:15</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Lois Miles</div>
+      <div class="col s3 doc">Dr. Virgie Farmer</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:45</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Roxie James</div>
+      <div class="col s3 doc">Dr. Susie Patterson</div>
+      </div></li>
+    </div>
+
+ </ul>
+
+
+<div class="col s12 patient-checkin">
+  <div class="col s6 hour addOn">9 AM</div><span></span>
+</div>
+
+ <ul class="collection">
+   <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Edith Hicks</div>
+      <div class="col s3 doc">Dr. Aiden Owen</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg"class="circle">
+      <div class="col s3 patient">Ronald Warner</div>
+      <div class="col s3 doc">Dr. Eunice Hunter</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:15</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg"class="circle">
+      <div class="col s3 patient">Bradley Cohen</div>
+      <div class="col s3 doc">Dr. Addie Alvarado</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:30</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle ">
+      <div class="col s3 patient">Ida Burgess</div>
+      <div class="col s3 doc">Dr. Mildred Carr</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:30</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Amanda Barnett</div>
+      <div class="col s3 doc">Dr. Herman Dennis</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:45</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
+      </div></li>
+    </div>
+
+    <div class="row collection col s12">
+    <div class="col s2 time">:00</div>
+    <li class="collection-item col s10">
+      <div class="collection-item avatar">
+      <img src="images/avatar.jpeg" class="circle">
+      <div class="col s3 patient">Erik Bishop</div>
+      <div class="col s3 doc">Dr. Randy Pittman</div>
+      </div></li>
+    </div>
+
+   
+ </ul>
+
+</div><!-- /.container -->
+</section>
+
+
+<!-- #Pass Entered Section END -->
+
+<!-- #patient Section -->
+<section id="patient">   
+<!-- <i class="material-icons">chevron_right</i> -->
+<div class="container">
+  <div class="row collection col s12 patient-detail">    
+      <div class="collection-item col s12">
+        <div class="collection-item avatar patient">
+        <img src="images/avatar.jpeg" class="circle bigger">
+        <div class="col s3 patient-big">Erik Bishop</div>
+        <div class="col s3 doc-big">Dr. Randy Pittman <br> <span class="appt-details"> Primary Care </span></div>
+        </div>
+      </div>
+      <!-- <div class="card-content"> -->
+      <div class="row text center">
+           <div class="col s4 personal-detail appt-time">APPOINTMENT TIME <br><span class="appt-details">08:00 AM</span></div>
+           <div class="col s4 personal-detail dob ">DOB <br> <span class="appt-details">11/14/1983</span></div>
+           <div class="col s4 personal-detail idNnum ">ID NUMBER <br> <span class="appt-details">448-21-0891</span></div>
+           
+           
+      </div><!-- end row text center -->
+      <div class="row button col s12">
+            <a href="#consent-form"><button class="btn col s12" href="#consent-form">VERIFY</button></a>
+            <input type="button" value="Testing HTML" onclick="window.location.href='test.html#consent-form';">
+      </div>
+  </div>
+
+<div class="col s6 patient-title">Patient Forms </div>
+  <div class="row col s12 text center">
+
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">HIPAA</span>
+        </div>
+        <img src="images/consent form img.svg" class="sm-forms">
+        <div class="status s4">Signed</div>
+      </div>
+    </div>
+   
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">Consent to Care</span>
+        </div>
+        <img src="images/consent form img.svg" class="sm-forms">
+        <div class="status s4 incomplete">Incomplete</div>
+      </div>
+    </div>
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">Intake</span>
+        </div>
+        <img src="images/intake form img.svg" class="sm-forms">
+        <div class="status s4 incomplete stat"> 25% Complete</div>
+      </div>
+    </div>
+
+
+
+</div>
+<footer class="footer"> 
+      <p class="footer-text" href="#consent-form">Launch Forms</p>
+        <a href="#consent-form">Consent Form </a>
+
+</footer>
+</div><!-- /.container -->
+
+</section>
+
+
+
+<!-- #Pass Entered Section END -->
+
+<!-- #Consent Form -->
+<section id="consent-form"> 
+<div class="container consent-form">  
+    <p>Treatment and Medication History Consent and Patient Acknowledgment of the Notice of Privacy practices and Consent to Use and Disclose Health Information.</p>
+<p>
+  I consent to all necessary steps taken for examination, diagnosis and treatment. If at any time I have questions about my examination, diagnosis, or treatment, I will not proceed until my questions have been answered so that I am fully informed. I understand that giving the providers and nurses all relevant information is important to my proper diagnosis and treatment. I understand complete compliance with my provider's instructions is critical to the success of any treatment prescribed.</p>
+
+<p>If required by law, I acknowledge that I was provided with an opportunity of a copy of the Premise Health Notice of Privacy Practices regarding uses and disclosures of information regarding me and my health (“Health Information”). I hereby consent to the use and disclosure of my health information, for the purposes and activities permitted under the federal privacy and state privacy laws, which are described in the Premise Health Notice of Privacy Practices.
+I specifically authorize the release, to the fullest extent permitted by law, for treatment, payment or operations purposes as described in the Notice of Privacy Practices, of information regarding the results of any HIV/AIDS testing or treatment, mental health treatment and substance abuse treatment.</p>
+
+<p>I authorize Premise Health to release my health information to my health plan or to a health and wellness provider approved by my health plan for purposes of advising me concerning appropriate measures to maintain or improve my health or any condition reflected in my records.
+I authorize Premise Health to release information to my designated insurance plan for the purpose of health plan administration, including receiving or making payment for services rendered on my behalf. I understand a patient is responsible for all charges incurred, subject to contract and program rules, regardless of my insurance status. If it becomes necessary to send this account to collections, the patient will be responsible for all additional charges.</p>
+
+<p> I have read and do understand the above information.</p>
+
+</div> <!-- end container -->
+<footer class="footer">
+      
+      <p class="footer-text" href="#consent-form">Agree</p>
+      
+</footer>
+</section><!-- #Consent Form end section -->
+
+
+<!-- END# Consent Form -->
+
+</body>
+
+<script type="text/javascript">
+    // var displayCustomHTMLToast = function () {
+    //   var $toastContent = $('<span>I am toast content</span>');
+    //   Materialize.toast($toastContent, 5000);
+    }
+  </script>
+</html>                                   
