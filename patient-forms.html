@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<title>Kiosks</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<style>
+  @font-face {
+    font-family: "proximaNova-semiBold";
+    src: url('../kiosks/proximanova/proximanova-sbold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova-sbold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: "proximaNova-bold";
+    src: url('../kiosks/proximanova/proximanova-bold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.woff') format('woff');
+  }
+
+   @font-face {
+    font-family: "proximaNova-regular";
+    src: url('../kiosks/proximanova/proximanova-reg-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: "proximaNova-light";
+    src: url('../kiosks/proximanova/proximanova-light-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-light-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.woff') format('woff');
+  }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-45 { font-size: 45px; }
+  
+/* fix padding under menu after resize */
+/*@media screen and (max-width: 767px) {
+  body { padding-top: 75px; }
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+  body { padding-top: 150px; }
+}
+@media screen and (min-width: 992px) {
+  body { padding-top: 75px; }
+}*/
+
+
+html, body {
+  background: #6AC5FB !important;
+  color: white !important;
+  font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  position: relative;
+  margin: 0;
+}
+nav {
+    background-color: #F9F9F9 !important;
+    height: 111px;
+}
+
+nav .nav-wrapper {
+    padding-top: 5vh !important;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+img.version-logo {
+    float: right;
+}
+
+li.active.navHead {
+    background: none !important;
+}
+
+.container{
+  position: relative;
+  height: 100vh;
+  overflow: scroll;
+}
+
+section#patient-forms {
+    padding-top: 10vh;
+    background: #FFFFFF;
+    color: #666666;
+}
+p.treatment {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.5rem;
+  color: #666666;
+}
+p.consent-text {
+  font-family: "proximaNova-regular";
+  font-size: 1.5rem;
+  color: #666666;
+}
+ /*<!-- SECTION patient-form -->*/
+
+ .row.info {
+    width: 680px;
+}
+.col.s12 {
+    background: /*lightblue*/;
+}
+h4.title-type {
+   font-family: "proximaNova-light";
+  font-size: 2.7rem;
+  color: #666666;
+}
+p.description {
+  font-family: "proximaNova-regular";
+  font-size: 1.3rem;
+  color: #979797;
+}
+
+.col.s10.selection {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.5rem;
+ /*   background: pink;*/
+    color: #666666;
+    padding: 0;
+}
+.col.s2.offset-s1 {
+    background: green;
+    width: 60px;
+    padding: 0;
+    margin-left: 45px;
+    height: 290px;
+}
+
+
+a.btn-flat.disabled.issues {
+    font-family: "proximaNova-semiBold";
+    font-size: 1.2rem;
+    color: #979797;
+    background: #FFFFFF;
+    width: 152px;
+    height: 42px;
+    border: 1px solid #E0E0E0;
+    text-align: center;
+}
+
+a.btn-flat.disabled.issues.none {
+    width: 75px;
+    height: 42px;
+    float: right;
+}
+
+/*/////FOOTER////*/
+footer {
+  font-family: "proximaNova-semiBold";
+    background: #F7774A;
+    height: 70px;
+    font-size: 1.5rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+p.footer-text {
+    color: #FFFFFF;
+    display: inline-block;
+    transform: translateY(-75%);
+}
+i.material-icons.md-45 {
+    color: white;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+/*/////FOOTER////*/
+
+</style>
+
+ <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="navbar-fixed"> 
+    <nav>
+      <div class="nav-wrapper">
+     <ul>
+            <li><img src="images/consent icon-tiny.svg"></li>
+            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/Primary Care Consent-logo.svg" alt="livingwell"></a></li>       
+      </ul>
+      <img class="version-logo"src="images/version 2.2-label.svg">
+          
+      </div>
+   </nav>
+</div>
+
+<!-- #patient forms -->
+<section id="patient-forms"> 
+<div class="container">  
+
+<div class="row info">
+      <div class="col s12"><h4 class="title-type"> Medical Procedures </h4>
+      <p class="description"> Understanding your past medical procedures helps your provider understand your future health risks.</p>
+      <!-- <span class="flow-text">This div is 12-columns wide on all screen sizes</span> -->
+      <div class="col s10 selection">Have you ever had any of the following surgeries or procedures?
+      <div class="row">
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled issues none">none</a></div></div>
+      </div> <!-- end col s10 -->
+      <div class="col s2 offset-s1"> small 1 </div>
+      </div>
+      <!-- <div class="col s2 offset-s10"><span class="flow-text">6-columns (offset-by-6)</span></div> -->
+    </div>
+
+
+</div><!-- end row -->
+
+
+</div> <!-- end container -->
+<footer>
+      <p class="footer-text" a href="#consent-form">I have read and agree to the Premise Health Consent to Care agreement</p>   <i class="material-icons md-45">chevron_right</i>
+      <!-- <a href='patient.html#patient'>Patient Click </a> -->
+</footer>
+</section><!-- #Consent Form end section -->
+
+
+<!-- END# Consent Form -->
+
+</body>
+
+
+
+</html>                                   
