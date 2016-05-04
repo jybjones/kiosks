@@ -41,6 +41,7 @@
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
+.material-icons.md-45 { font-size: 45px; }
   
 /* fix padding under menu after resize */
 /*@media screen and (max-width: 767px) {
@@ -63,37 +64,32 @@ html, body {
   margin: 0;
 }
 nav {
-    background-color: pink !important;
-    height: 11vh !important;
-    padding-top: 5vh !important;
+    background-color: #F9F9F9 !important;
     height: 111px;
+}
+
+nav .nav-wrapper {
+   /* position: relative;
+    height: 100%;
+    display: inline-block;
+    width: 100%;*/
+    padding-top: 5vh !important;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+img.version-logo {
+    float: right;
 }
 
 li.active.navHead {
     background: none !important;
 }
 
-.livewell {
-  width: 47vw;
-  padding-top: 2vh;
-  padding-left: 25px;
-  
-}
-.kioskbrand {
-  width: 26vw;
-  float: right;
-  padding-top: 2vh;
-  padding-right: 25px;
-}
 .container{
   position: relative;
   height: 100vh;
-  /*overflow: scroll;*/
-}
-
-section#home {
-  /*  height: 100%;*/
-    padding-top: 11vh;
+  overflow: scroll;
 }
 
 /* centered columns styles */
@@ -111,17 +107,24 @@ section#home {
 
 
 section#consent-form {
-    height: 100%;
-    padding-top: 15vh;
+    padding-top: 10vh;
     background: #FFFFFF;
     color: #666666;
-   /* z-index: 9999;*/
-    position: relative;
+}
+p.treatment {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.5rem;
+  color: #666666;
+}
+p.consent-text {
+  font-family: "proximaNova-regular";
+  font-size: 1.5rem;
+  color: #666666;
 }
  /*<!-- SECTION consent-form -->*/
 
 /*/////FOOTER////*/
-footer.footer {
+footer {
   font-family: "proximaNova-semiBold";
     background: #F7774A;
     height: 70px;
@@ -133,8 +136,14 @@ footer.footer {
 }
 
 p.footer-text {
-    text-align: center;
     color: #FFFFFF;
+    display: inline-block;
+    transform: translateY(-75%);
+}
+i.material-icons.md-45 {
+    color: white;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 /*/////FOOTER////*/
 
@@ -150,10 +159,12 @@ p.footer-text {
 <div class="navbar-fixed"> 
     <nav>
       <div class="nav-wrapper">
-      <ul>
-            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li> 
+     <ul>
+            <li><img src="images/consent icon-tiny.svg"></li>
+            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/Primary Care Consent-logo.svg" alt="livingwell"></a></li>       
       </ul>
-          <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
+      <img class="version-logo"src="images/version 2.2-label.svg">
+          
       </div>
    </nav>
 </div>
@@ -163,21 +174,21 @@ p.footer-text {
 <!-- #Consent Form -->
 <section id="consent-form"> 
 <div class="container consent-form">  
-    <p>Treatment and Medication History Consent and Patient Acknowledgment of the Notice of Privacy practices and Consent to Use and Disclose Health Information.</p>
-<p>
+    <p class="treatment">Treatment and Medication History Consent and Patient Acknowledgment of the Notice of Privacy practices and Consent to Use and Disclose Health Information.</p>
+<p class="consent-text">
   I consent to all necessary steps taken for examination, diagnosis and treatment. If at any time I have questions about my examination, diagnosis, or treatment, I will not proceed until my questions have been answered so that I am fully informed. I understand that giving the providers and nurses all relevant information is important to my proper diagnosis and treatment. I understand complete compliance with my provider's instructions is critical to the success of any treatment prescribed.</p>
 
-<p>If required by law, I acknowledge that I was provided with an opportunity of a copy of the Premise Health Notice of Privacy Practices regarding uses and disclosures of information regarding me and my health (“Health Information”). I hereby consent to the use and disclosure of my health information, for the purposes and activities permitted under the federal privacy and state privacy laws, which are described in the Premise Health Notice of Privacy Practices.
+<p class="consent-text">If required by law, I acknowledge that I was provided with an opportunity of a copy of the Premise Health Notice of Privacy Practices regarding uses and disclosures of information regarding me and my health (“Health Information”). I hereby consent to the use and disclosure of my health information, for the purposes and activities permitted under the federal privacy and state privacy laws, which are described in the Premise Health Notice of Privacy Practices.
 I specifically authorize the release, to the fullest extent permitted by law, for treatment, payment or operations purposes as described in the Notice of Privacy Practices, of information regarding the results of any HIV/AIDS testing or treatment, mental health treatment and substance abuse treatment.</p>
 
-<p>I authorize Premise Health to release my health information to my health plan or to a health and wellness provider approved by my health plan for purposes of advising me concerning appropriate measures to maintain or improve my health or any condition reflected in my records.
+<p class="consent-text">I authorize Premise Health to release my health information to my health plan or to a health and wellness provider approved by my health plan for purposes of advising me concerning appropriate measures to maintain or improve my health or any condition reflected in my records.
 I authorize Premise Health to release information to my designated insurance plan for the purpose of health plan administration, including receiving or making payment for services rendered on my behalf. I understand a patient is responsible for all charges incurred, subject to contract and program rules, regardless of my insurance status. If it becomes necessary to send this account to collections, the patient will be responsible for all additional charges.</p>
 
-<p> I have read and do understand the above information.</p>
+<p class="consent-text"> I have read and do understand the above information.</p>
 
 </div> <!-- end container -->
-<footer class="footer">
-      <p class="footer-text" a href="#consent-form">I have read and agree to the Premise Health Consent to Care agreement <i class="material-icons footer-text">chevron_right</i></p>   
+<footer>
+      <p class="footer-text" a href="#consent-form">I have read and agree to the Premise Health Consent to Care agreement</p>   <i class="material-icons md-45">chevron_right</i>
       <!-- <a href='patient.html#patient'>Patient Click </a> -->
 </footer>
 </section><!-- #Consent Form end section -->

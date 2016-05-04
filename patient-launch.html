@@ -41,6 +41,7 @@
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
+.material-icons.md-45 { font-size: 45px; }
   
 /* fix padding under menu after resize */
 /*@media screen and (max-width: 767px) {
@@ -106,14 +107,14 @@ h4.password {
 
 .container{
   height: 100vh;
-  overflow: scroll;
+ /* overflow: scroll;*/
   position: relative;
 }
 /*<!-- SECTION PATIENT -->*/
 
-section#patient {
+section#patient-launch {
     height: 100%;
-    padding-top: 15vh;
+    padding-top: 12vh;
 }
 
 .row.collection.col.s12.patient-detail {
@@ -258,7 +259,7 @@ img.sm-forms {
 /*<!-- SECTION PATIENT -->*/
 
 /*/////FOOTER////*/
-footer.footer {
+footer {
   font-family: "proximaNova-semiBold";
     background: #F7774A;
     height: 70px;
@@ -269,9 +270,11 @@ footer.footer {
     width: 100%;
 }
 
-p.footer-text {
+.footer-text {
     text-align: center;
     color: #FFFFFF;
+    border: none;
+    background: transparent;
 }
 /*/////FOOTER////*/
 
@@ -316,8 +319,6 @@ p.footer-text {
       </div><!-- end row text center -->
       <div class="row button col s12">
             <a href='patient-consent.html#consent-form'><button class="btn col s12" href="#consent-form">VERIFY</button></a>
-
-            <!-- <input type="button" value="Testing HTML" onclick="window.location.href='test.html#consent-form';"> -->
       </div>
   </div>
 
@@ -356,9 +357,8 @@ p.footer-text {
 </div>
 
 </div><!-- /.container -->
-<footer class="footer"> 
-      <p class="footer-text" href='patient-consent.html#consent-form'>Launch Forms</p>
-      
+<footer> 
+  <input type="button" class="footer-text" value="Launch Forms" onclick="window.location.href='patient-consent.html#consent-form';">
 </footer>
 </section>
 
