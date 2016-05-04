@@ -67,6 +67,10 @@ nav {
     background-color: #F9F9F9 !important;
     height: 111px;
 }
+img.primary-logo {
+    width: 250px;
+    height: 50px;
+}
 
 nav .nav-wrapper {
    /* position: relative;
@@ -135,7 +139,7 @@ footer {
     width: 100%;
 }
 
-p.footer-text {
+.footer-text {
     color: #FFFFFF;
     display: inline-block;
     transform: translateY(-75%);
@@ -160,8 +164,8 @@ i.material-icons.md-45 {
     <nav>
       <div class="nav-wrapper">
      <ul>
-            <li><img src="images/consent icon-tiny.svg"></li>
-            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/Primary Care Consent-logo.svg" alt="livingwell"></a></li>       
+            <!-- <li><img src="images/consent icon-tiny.svg"></li> -->
+            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/consent-form-logo.svg" alt="livingwell"></a></li>       
       </ul>
       <img class="version-logo"src="images/version 2.2-label.svg">
           
@@ -188,8 +192,8 @@ I authorize Premise Health to release information to my designated insurance pla
 
 </div> <!-- end container -->
 <footer>
-      <p class="footer-text" a href="#consent-form">I have read and agree to the Premise Health Consent to Care agreement</p>   <i class="material-icons md-45">chevron_right</i>
-      <!-- <a href='patient.html#patient'>Patient Click </a> -->
+       <input type="button" class="footer-text" value="I have read and agree to the Premise Health Consent to Care agreement" onclick="window.location.href='patient-forms.html#patient-forms';">
+        <i class="material-icons md-45">chevron_right</i>
 </footer>
 </section><!-- #Consent Form end section -->
 
