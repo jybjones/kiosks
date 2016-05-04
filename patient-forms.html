@@ -87,26 +87,32 @@ li.active.navHead {
   height: 100vh;
   overflow: scroll;
 }
-
+.col.s12 {
+    position: relative;
+}
+ /*<!-- SECTION patient-form -->*/
 section#patient-forms {
     padding-top: 10vh;
     background: #FFFFFF;
     color: #666666;
 }
-p.treatment {
+/*p.treatment {
   font-family: "proximaNova-semiBold";
   font-size: 1.5rem;
   color: #666666;
-}
-p.consent-text {
+}*/
+/*p.consent-text {
   font-family: "proximaNova-regular";
   font-size: 1.5rem;
   color: #666666;
 }
- /*<!-- SECTION patient-form -->*/
+*/
 
  .row.info {
     width: 680px;
+}
+.row.selections {
+    margin: 0;
 }
 .col.s12 {
     background: /*lightblue*/;
@@ -209,17 +215,37 @@ i.material-icons.md-45 {
       <div class="col s12"><h4 class="title-type"> Medical Procedures </h4>
       <p class="description"> Understanding your past medical procedures helps your provider understand your future health risks.</p>
       <!-- <span class="flow-text">This div is 12-columns wide on all screen sizes</span> -->
-      <div class="col s10 selection">Have you ever had any of the following surgeries or procedures?
-      <div class="row">
+  <div class="col s10 selection">Have you ever had any of the following surgeries or procedures?
+      <div class="row selections">
           <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled issues none">none</a></div></div>
-      </div> <!-- end col s10 -->
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues none">none</a></div>
+          
+        
+      </div>
+
+ <div class="row selections">
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+</div> 
+<div class="row selections">
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+ </div>
+
+  </div> <!-- end col s10 -->
       <div class="col s2 offset-s1"> small 1 </div>
       </div>
       <!-- <div class="col s2 offset-s10"><span class="flow-text">6-columns (offset-by-6)</span></div> -->
     </div>
+<!-- <div class="card-panel">
+         <h5>Flat Buttons</h5>
+         <button class="btn-flat waves-effect waves-teal">Add</button></td>
+         <button class="btn-flat waves-effect waves-teal disabled" ><i class="material-icons left">add</i>Add</button></td>
+      </div> -->
 
 
 </div><!-- end row -->
