@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<title>Kiosks</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<style>
+  @font-face {
+    font-family: "proximaNova-semiBold";
+    src: url('../kiosks/proximanova/proximanova-sbold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova-sbold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: "proximaNova-bold";
+    src: url('../kiosks/proximanova/proximanova-bold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.woff') format('woff');
+  }
+
+   @font-face {
+    font-family: "proximaNova-regular";
+    src: url('../kiosks/proximanova/proximanova-reg-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: "proximaNova-light";
+    src: url('../kiosks/proximanova/proximanova-light-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-light-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.woff') format('woff');
+  }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+  
+/* fix padding under menu after resize */
+/*@media screen and (max-width: 767px) {
+  body { padding-top: 75px; }
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+  body { padding-top: 150px; }
+}
+@media screen and (min-width: 992px) {
+  body { padding-top: 75px; }
+}*/
+
+
+html, body {
+  background: #6AC5FB !important;
+  color: white !important;
+  font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  position: relative;
+  margin: 0;
+}
+nav {
+    background-color: #53B6F0 !important;
+    height: 11vh !important;
+    padding-top: 5vh !important;
+    height: 111px;
+}
+
+li.active.navHead {
+    background: none !important;
+}
+
+.livewell {
+  width: 47vw;
+  padding-top: 2vh;
+  padding-left: 25px;
+  
+}
+.kioskbrand {
+  width: 26vw;
+  float: right;
+  padding-top: 2vh;
+  padding-right: 25px;
+}
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+h4.password {
+  font-family: 'proximaNova-light';
+  padding-top: 8vh;
+}
+
+.container{
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+/*<!-- SECTION PATIENT -->*/
+
+section#patient {
+    height: 100%;
+    padding-top: 15vh;
+}
+
+.row.collection.col.s12.patient-detail {
+    width: 680px;
+    height: 341px;
+   /*height: auto;*/
+    background: #F9F9F9;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16) ,0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.row.col.s12.text.center {
+    width: 678px;
+    height: 294px;
+}
+
+.collection-item.avatar.patient {
+    height: 111px;
+    width: 680px;
+}
+.col.s4.personal-detail {
+    height: 115px;
+    width: 214px;
+     font-family: "proximaNova-semiBold";
+    border-style: solid;
+     margin-top: 15px;
+    padding-top: 5%;
+     border-color: #E3E3E3;
+     border-style: solid;
+     border-width: .5px;
+     font-size: 1.2rem;
+     color: #666666;
+     
+}
+.row .col.s4 {
+    width: 214px;
+    margin-left: auto;
+    border-width: .5px;
+    border-style: solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: -25px;
+}
+.col.s4.appt-time {
+    margin-left: 15px;
+}
+
+.col.s3.patient-big {
+  font-family: "proximaNova-semiBold";
+  margin-top: 15px;
+  font-size: 1.8rem;
+  text-align: right;
+}
+
+.col.s3.doc-big {
+    float: right;
+    font-family: "proximaNova-semiBold";
+    color: #666666;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+span.appt-details {
+   font-family: "proximaNova-regular";
+    color: #979797;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+button.btn.col.s12 {
+  font-family: "proximaNova-semiBold";
+  font-size: 1.4rem;
+    height: 50px;
+    background: transparent;
+    border-color: #6ECDB2;
+    border-style: solid;
+    color: #6ECDB2;
+    box-shadow: none;
+}
+button.btn.col.s12:active, .btn-large:active {
+    background-color: #6ECDB2;
+}
+
+button.btn.col.s12  a:active {
+    color: #fff;
+    background: #3cafe2;
+}
+
+.col.s6.patient-title {
+   font-family: "proximaNova-semiBold";
+    font-size: 1.4rem;
+    margin-top: 25px;
+    color: #115F98;
+}
+.row.col.s12.text.center {
+    width: 680px;
+}
+.col.s4.patient-forms {
+    height: 294px;
+    width: 216px;
+    padding: 0;
+    border: none;
+}
+.card-content.title {
+     font-family: "proximaNova-semiBold";
+    font-size: 1.3rem;
+    color: #115F98;
+    padding-top: 20px;
+}
+img.sm-forms {
+    height: 115px;
+    width: 86px;
+    margin-top: 50px;
+}
+.card-panel.small {
+    height: 294px;
+    width: 216px;
+    padding: 0;
+}
+.status.s4 {
+    font-family: "proximaNova-semiBold";
+    font-size: 1.2rem;
+  /*  color: #FFFFFFF;*/
+    background: #82D5BD;
+    width: 216px;
+    height: 44px;
+    padding-top: 15px;
+    margin-top: 44px;
+}
+.status.s4.incomplete {
+    background: #F9F9F9;
+    color: #979797;
+    border: 0.2px solid #EEEEEE;
+}
+.status.s4.incomplete.stat {
+  background-image:
+    linear-gradient(
+      to right,  
+    #EEEEEE 25%,
+     #F9F9F9 25%    
+    );
+}
+
+
+/*<!-- SECTION PATIENT -->*/
+
+/*/////FOOTER////*/
+footer.footer {
+  font-family: "proximaNova-semiBold";
+    background: #F7774A;
+    height: 70px;
+    font-size: 1.5rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+p.footer-text {
+    text-align: center;
+    color: #FFFFFF;
+}
+/*/////FOOTER////*/
+
+</style>
+
+ <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="navbar-fixed"> 
+    <nav>
+      <div class="nav-wrapper">
+      <ul>
+            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li> 
+      </ul>
+          <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
+      </div>
+   </nav>
+</div>
+
+<!-- #patient-launch Section -->
+<section id="patient-launch">   
+<!-- <i class="material-icons">chevron_right</i> -->
+<div class="container">
+  <div class="row collection col s12 patient-detail">    
+      <div class="collection-item col s12">
+        <div class="collection-item avatar patient">
+        <img src="images/avatar.jpeg" class="circle bigger">
+        <div class="col s3 patient-big">Erik Bishop</div>
+        <div class="col s3 doc-big">Dr. Randy Pittman <br> <span class="appt-details"> Primary Care </span></div>
+        </div>
+      </div>
+      <!-- <div class="card-content"> -->
+      <div class="row text center">
+           <div class="col s4 personal-detail appt-time">APPOINTMENT TIME <br><span class="appt-details">08:00 AM</span></div>
+           <div class="col s4 personal-detail dob ">DOB <br> <span class="appt-details">11/14/1983</span></div>
+           <div class="col s4 personal-detail idNnum ">ID NUMBER <br> <span class="appt-details">448-21-0891</span></div>
+           
+      </div><!-- end row text center -->
+      <div class="row button col s12">
+            <a href='patient-consent.html#consent-form'><button class="btn col s12" href="#consent-form">VERIFY</button></a>
+
+            <!-- <input type="button" value="Testing HTML" onclick="window.location.href='test.html#consent-form';"> -->
+      </div>
+  </div>
+
+<div class="col s6 patient-title">Patient Forms </div>
+  <div class="row col s12 text center">
+
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">HIPAA</span>
+        </div>
+        <img src="images/consent form img.svg" class="sm-forms">
+        <div class="status s4">Signed</div>
+      </div>
+    </div>
+   
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">Consent to Care</span>
+        </div>
+        <img src="images/consent form img.svg" class="sm-forms">
+        <div class="status s4 incomplete">Incomplete</div>
+      </div>
+    </div>
+    <div class="col s4 patient-forms">
+      <div class="card-panel small">
+        <div class="card-content title">
+          <span class="card-title">Intake</span>
+        </div>
+        <img src="images/intake form img.svg" class="sm-forms">
+        <div class="status s4 incomplete stat"> 25% Complete</div>
+      </div>
+    </div>
+
+</div>
+
+</div><!-- /.container -->
+<footer class="footer"> 
+      <p class="footer-text" href='patient-consent.html#consent-form'>Launch Forms</p>
+      
+</footer>
+</section>
+
+</body>
+
+</html>                                   

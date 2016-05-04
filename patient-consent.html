@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<title>Kiosks</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<style>
+  @font-face {
+    font-family: "proximaNova-semiBold";
+    src: url('../kiosks/proximanova/proximanova-sbold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova-sbold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-sbold-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: "proximaNova-bold";
+    src: url('../kiosks/proximanova/proximanova-bold-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-bold-webfont.woff') format('woff');
+  }
+
+   @font-face {
+    font-family: "proximaNova-regular";
+    src: url('../kiosks/proximanova/proximanova-reg-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-reg-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: "proximaNova-light";
+    src: url('../kiosks/proximanova/proximanova-light-webfont.eot') format('embedded-opentype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.svg') format('svg'),
+         url('../kiosks/proximanova/proximanova-light-webfont.ttf')  format('truetype'),
+         url('../kiosks/proximanova/proximanova-light-webfont.woff') format('woff');
+  }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+  
+/* fix padding under menu after resize */
+/*@media screen and (max-width: 767px) {
+  body { padding-top: 75px; }
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+  body { padding-top: 150px; }
+}
+@media screen and (min-width: 992px) {
+  body { padding-top: 75px; }
+}*/
+
+
+html, body {
+  background: #6AC5FB !important;
+  color: white !important;
+  font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  position: relative;
+  margin: 0;
+}
+nav {
+    background-color: pink !important;
+    height: 11vh !important;
+    padding-top: 5vh !important;
+    height: 111px;
+}
+
+li.active.navHead {
+    background: none !important;
+}
+
+.livewell {
+  width: 47vw;
+  padding-top: 2vh;
+  padding-left: 25px;
+  
+}
+.kioskbrand {
+  width: 26vw;
+  float: right;
+  padding-top: 2vh;
+  padding-right: 25px;
+}
+.container{
+  position: relative;
+  height: 100vh;
+  /*overflow: scroll;*/
+}
+
+section#home {
+  /*  height: 100%;*/
+    padding-top: 11vh;
+}
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+
+section#consent-form {
+    height: 100%;
+    padding-top: 15vh;
+    background: #FFFFFF;
+    color: #666666;
+   /* z-index: 9999;*/
+    position: relative;
+}
+ /*<!-- SECTION consent-form -->*/
+
+/*/////FOOTER////*/
+footer.footer {
+  font-family: "proximaNova-semiBold";
+    background: #F7774A;
+    height: 70px;
+    font-size: 1.5rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+p.footer-text {
+    text-align: center;
+    color: #FFFFFF;
+}
+/*/////FOOTER////*/
+
+</style>
+
+ <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="navbar-fixed"> 
+    <nav>
+      <div class="nav-wrapper">
+      <ul>
+            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li> 
+      </ul>
+          <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
+      </div>
+   </nav>
+</div>
+
+<!-- #patient-launch Section -->
+
+<!-- #Consent Form -->
+<section id="consent-form"> 
+<div class="container consent-form">  
+    <p>Treatment and Medication History Consent and Patient Acknowledgment of the Notice of Privacy practices and Consent to Use and Disclose Health Information.</p>
+<p>
+  I consent to all necessary steps taken for examination, diagnosis and treatment. If at any time I have questions about my examination, diagnosis, or treatment, I will not proceed until my questions have been answered so that I am fully informed. I understand that giving the providers and nurses all relevant information is important to my proper diagnosis and treatment. I understand complete compliance with my provider's instructions is critical to the success of any treatment prescribed.</p>
+
+<p>If required by law, I acknowledge that I was provided with an opportunity of a copy of the Premise Health Notice of Privacy Practices regarding uses and disclosures of information regarding me and my health (“Health Information”). I hereby consent to the use and disclosure of my health information, for the purposes and activities permitted under the federal privacy and state privacy laws, which are described in the Premise Health Notice of Privacy Practices.
+I specifically authorize the release, to the fullest extent permitted by law, for treatment, payment or operations purposes as described in the Notice of Privacy Practices, of information regarding the results of any HIV/AIDS testing or treatment, mental health treatment and substance abuse treatment.</p>
+
+<p>I authorize Premise Health to release my health information to my health plan or to a health and wellness provider approved by my health plan for purposes of advising me concerning appropriate measures to maintain or improve my health or any condition reflected in my records.
+I authorize Premise Health to release information to my designated insurance plan for the purpose of health plan administration, including receiving or making payment for services rendered on my behalf. I understand a patient is responsible for all charges incurred, subject to contract and program rules, regardless of my insurance status. If it becomes necessary to send this account to collections, the patient will be responsible for all additional charges.</p>
+
+<p> I have read and do understand the above information.</p>
+
+</div> <!-- end container -->
+<footer class="footer">
+      <p class="footer-text" a href="#consent-form">I have read and agree to the Premise Health Consent to Care agreement <i class="material-icons footer-text">chevron_right</i></p>   
+      <!-- <a href='patient.html#patient'>Patient Click </a> -->
+</footer>
+</section><!-- #Consent Form end section -->
+
+
+<!-- END# Consent Form -->
+
+</body>
+
+
+
+</html>                                   
