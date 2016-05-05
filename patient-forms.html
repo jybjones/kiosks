@@ -73,7 +73,10 @@ nav .nav-wrapper {
     padding-left: 3%;
     padding-right: 3%;
 }
-
+img.primary-logo {
+    width: 224px;
+    height: 24px;
+}
 img.version-logo {
     float: right;
 }
@@ -115,7 +118,7 @@ section#patient-forms {
    margin-bottom:0;
 }
 .col.s12 {
-    background: /*lightblue*/;
+   /* background: /*lightblue*/;*/
 }
 h4.title-type {
    font-family: "proximaNova-light";
@@ -127,6 +130,11 @@ p.description {
   font-size: 1.3rem;
   color: #979797;
 }
+h5.questions {
+    padding-bottom: 15px;
+    padding-top: 20px;
+    font-size: 1.5rem;
+}
 
 .col.s10.selection {
   font-family: "proximaNova-semiBold";
@@ -136,11 +144,16 @@ p.description {
     padding: 0;
 }
 .col.s2.offset-s1 {
-    background: green;
     width: 60px;
-    padding: 0;
-    margin-left: 45px;
+    padding: 0 auto;
+    margin-left: 33px;
     height: 290px;
+}
+img.page-placement {
+    /* width: 60px; */
+    height: 40px;
+    margin-left: 1px;
+    margin-bottom: 5px;
 }
 
 .col.s3.selection {
@@ -173,6 +186,7 @@ button.btn-flat.disabled.issues.none {
 button.selected{
   background:#6ECDB2;
   border: 1px solid #E0E0E0 !important;
+  color: #FFFFFF !important;
 }
 
 /*/////FOOTER////*/
@@ -215,7 +229,7 @@ i.material-icons.md-45 {
       <div class="nav-wrapper">
      <ul>
             <!-- <li><img src="images/consent icon-tiny.svg"></li> -->
-            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/consent-form-logo.svg" alt="livingwell"></a></li>       
+            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/intakeform-logo.svg" alt="livingwell"></a></li>       
       </ul>
       <img class="version-logo"src="images/version 2.2-label.svg">
           
@@ -231,7 +245,7 @@ i.material-icons.md-45 {
       <div class="col s12"><h4 class="title-type"> Medical Procedures </h4>
       <p class="description"> Understanding your past medical procedures helps your provider understand your future health risks.</p>
       <!-- <span class="flow-text">This div is 12-columns wide on all screen sizes</span> -->
-  <div class="col s10 selection">Have you ever had any of the following surgeries or procedures?
+  <div class="col s10 selection"><h5 class="questions">Have you ever had any of the following surgeries or procedures?</h5>
       <div class="row selections">
           <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
            <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton2</button></div>
@@ -301,7 +315,7 @@ i.material-icons.md-45 {
 
 
   </div> <!-- end col s10 -->
-      <div class="col s2 offset-s1"> small 1 </div>
+      <div class="col s2 offset-s1"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"></div>
       </div>
       <!-- <div class="col s2 offset-s10"><span class="flow-text">6-columns (offset-by-6)</span></div> -->
     </div>
