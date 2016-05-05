@@ -150,11 +150,11 @@ p.description {
     margin: 0;
 }
 
-a.btn-flat.disabled.issues {
+button.btn-flat.disabled.issues {
     font-family: "proximaNova-semiBold";
     font-size: 1.2rem;
     color: #979797;
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/
     width: 142px;
     height: 42px;
     border: 1px solid #E0E0E0;
@@ -163,13 +163,18 @@ a.btn-flat.disabled.issues {
     margin: 0;
 }
 
-a.btn-flat.disabled.issues.none {
+button.btn-flat.disabled.issues.none {
     width: 75px;
     height: 42px;
     float: right;
 }.row.selections.other {
     margin-top: 2rem;
 }
+button.selected{
+  background:#6ECDB2;
+  border: 1px solid #E0E0E0 !important;
+}
+
 /*/////FOOTER////*/
 /*footer {
   font-family: "proximaNova-semiBold";
@@ -186,6 +191,8 @@ p.footer-text {
     color: #FFFFFF;
     display: inline-block;
     transform: translateY(-75%);
+    background: transparent;
+    border: none;
 }
 i.material-icons.md-45 {
     color: white;
@@ -207,8 +214,8 @@ i.material-icons.md-45 {
     <nav>
       <div class="nav-wrapper">
      <ul>
-            <li><img src="images/consent icon-tiny.svg"></li>
-            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/Primary Care Consent-logo.svg" alt="livingwell"></a></li>       
+            <!-- <li><img src="images/consent icon-tiny.svg"></li> -->
+            <li class="active navHead"><a href='host.html#home'><img class="primary-logo" src="images/consent-form-logo.svg" alt="livingwell"></a></li>       
       </ul>
       <img class="version-logo"src="images/version 2.2-label.svg">
           
@@ -226,71 +233,70 @@ i.material-icons.md-45 {
       <!-- <span class="flow-text">This div is 12-columns wide on all screen sizes</span> -->
   <div class="col s10 selection">Have you ever had any of the following surgeries or procedures?
       <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues none">NONE</a></div>
-          
-        
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+           <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton2</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton2</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues none">NONE</button></div>
+          <!-- <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues none">NONE</a></div> -->
       </div>
 
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
 
 </div> 
 <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Button</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">TESButton</button></div>
  </div>
  <div class="row selections">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Prostate Surgery</a></div>
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">Thyroidectomy</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">Prostate Surgery</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">Thyroidectomy</button></div>
  </div>
  <div class="row selections other">
-          <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues">OTHER</a></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues">OTHER</button></div>
  </div>
 
 
@@ -302,7 +308,7 @@ i.material-icons.md-45 {
 <!-- <div class="card-panel">
          <h5>Flat Buttons</h5>
          <button class="btn-flat waves-effect waves-teal">Add</button></td>
-         <button class="btn-flat waves-effect waves-teal disabled" ><i class="material-icons left">add</i>Add</button></td>
+         <button class="btn-flat waves-effect disabled" ><i class="material-icons left">add</i>Add</button></td>
       </div> -->
 
 
@@ -321,6 +327,11 @@ i.material-icons.md-45 {
 
 </body>
 
-
+<script>
+  $('button').on('click', function(){
+    $('button').removeClass('selected');
+    $(this).addClass('selected');
+});
+</script>
 
 </html>                                   
