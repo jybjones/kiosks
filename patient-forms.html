@@ -42,6 +42,7 @@
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-45 { font-size: 45px; }
+
   
 /* fix padding under menu after resize */
 /*@media screen and (max-width: 767px) {
@@ -212,19 +213,23 @@ button.btn-flat.disabled.issues.aditional-info {
     width: 580px;
 }
 .col.s5.question {
-    background: pink;
     width: 292px;
-    height: 40px;
+    height: 42px;
     display: flex;
+    padding-top: 15px;
 }
 
 .col.s4.calendar {
-  font-family: "proximaNova-semiBold";
-    width: 146px;
-    height: 31px;
+    font-family: "proximaNova-semiBold";
+    width: 150px;
+    height: 42px;
     font-size: 1.4rem;
     color: gray;
+    padding-top: 5px;
+    margin: 0;
+    margin-left: 10px;
 }
+
 input[type=text]{
   font-family: "proximaNova-regular";
   font-size: 1.4rem;
@@ -235,6 +240,13 @@ input[type=text]{
 .datepicker {
   font-family: "proximaNova-semiBold";
   color: #51AB91 !important;
+}
+
+i.material-icons.md-18.calendar {
+    float: left;
+    padding-top: 10px;
+    display: inline-block;
+    transform: translateX(-150%);
 }
 
 /* MAINTENANCE END */
@@ -525,72 +537,74 @@ i.material-icons.md-45 {
       <div class="row health-maintenance">
           <div class="col s5 question"><div class="selection">When was your last physical?</div></div>
            <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
-            <div class="col s4 calendar"> <input type="date" class="datepicker" placeholder="Select Date"></div>
-
-          <div class="col s3 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
       </div>
 
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">Date of your last flu shot?</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
 
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">Date of your last pneumonia shot?</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
 
-</div> 
-<div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabled">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
- </div>
- <div class="row selections">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">Prostate Surgery</button></div>
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">Thyroidectomy</button></div>
- </div>
- <div class="row selections other">
-          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">OTHER</button></div>
- </div>
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">Date of your last tetanus shot??</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
 
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">When was your last cholestoral lab test?</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
 
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">When was your last pap smear?</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
+
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">When was your last mammogram?</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
+
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">When was your last colonoscopy?</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
+
+            <div class="row health-maintenance">
+          <div class="col s5 question"><div class="selection">When was your last DEXA scan<br>(osteoporosis screening)?</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+            <div class="col s4 calendar"><input type="date" class="datepicker" placeholder="Select Date"></div>
+            <i class="material-icons md-18 calendar">date_range</i>
+          <div class="col s2 selection"><button class="btn-flat disabled issues none disabledBtn">NEVER</button></div>
+      </div>
 
 
   </div> <!-- !!!!!!! end col s10 -->
