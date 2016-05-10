@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/jquery.nouislider/8.5.0/nouislider.min.css">
+
 <style>
   @font-face {
     font-family: "proximaNova-semiBold";
@@ -274,6 +276,14 @@ button.btn-circle.disabled.enabledBtn {
   border: none !important;
 }
 
+.col.s9.dial {
+    background: pink !important;
+    width: 420px;
+    height: 51px;
+    padding: 0;
+    margin: 0;
+}
+
 /*/////FOOTER////*/
 footer {
   font-family: "proximaNova-semiBold";
@@ -305,6 +315,7 @@ i.material-icons.md-45 {
  <!-- Compiled and minified JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script type="https://cdn.jsdelivr.net/jquery.nouislider/8.5.0/nouislider.min.js"></script>
 
 </head>
 <body>
@@ -789,6 +800,23 @@ i.material-icons.md-45 {
       </div>           
     </div> 
 
+    <div class="row health-maintenance">
+          <div class="col s3 question"><div class="selection">Sleep</div></div>
+           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
+     <!--  <div class="row"> -->
+          <div class="col s9 dial">
+            <form action="#">
+    <p class="range-field">
+      <input type="range" id="test5" min="0" max="100" />
+    </p>
+  </form>
+        
+            
+          </div>
+          
+       
+    </div> 
+
 
 
 
@@ -844,6 +872,21 @@ btn.on('click', function() {
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
+
+ var slider = document.getElementById('test5');
+  noUiSlider.create(slider, {
+   start: [20, 80],
+   connect: true,
+   step: 1,
+   range: {
+     'min': 0,
+     'max': 100
+   },
+   format: wNumb({
+     decimals: 0
+   })
+  });
+        
 
 </script>
 
