@@ -4,9 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">     
 <title>Kiosks</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/jquery.nouislider/8.5.0/nouislider.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.nouislider/8.5.0/nouislider.min.css">
 
 <style>
   @font-face {
@@ -257,6 +256,7 @@ i.material-icons.md-18.calendar {
     transform: translateX(-150%);
 }
 
+
 /* MAINTENANCE END */
 
 /* SOCIAL HISTORY*/
@@ -280,12 +280,24 @@ button.btn-circle.disabled.enabledBtn {
 }
 
 .col.s9.dial {
-    background: pink !important;
+   /* background: pink !important;*/
     width: 420px;
     height: 51px;
     padding: 0;
     margin: 0;
 }
+p.range-field {
+    display: inline-block;
+    width: 100%;
+    font-family: "proximaNova-semiBold";
+    font-size: 1.2rem;
+    color: #979797;
+}
+span.range-field2 {
+    float: right;
+}
+
+
 
 /*/////FOOTER////*/
 footer {
@@ -318,8 +330,11 @@ i.material-icons.md-45 {
  <!-- Compiled and minified JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-<script type="https://cdn.jsdelivr.net/jquery.nouislider/8.5.0/nouislider.min.js"></script>
+<script src="https://rawgit.com/leongersen/noUiSlider/master/distribute/nouislider.min.js"></script>
 
+<!-- <script src="https://rawgit.com/leongersen/noUiSlider/master/distribute/nouislider.min.js"></script>
+<script src="https://rawgit.com/leongersen/wnumb/master/wNumb.js"></script>
+<script src=""https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
 </head>
 <body>
 <!-- Fixed navbar -->
@@ -805,25 +820,39 @@ i.material-icons.md-45 {
 
     <div class="row health-maintenance">
           <div class="col s3 question"><div class="selection">Sleep</div></div>
-           <!-- <div class="col s4 calendar"><button class="btn-flat disabled  disabledBtncalendar">select date</button></div> -->
-     <!--  <div class="row"> -->
           <div class="col s9 dial">
-            <form action="#">
-    <p class="range-field">
-      <input type="range" id="test5" min="0" max="100" />
-    </p>
-  </form>
-        
+             <form action="range">
+                <p class="range-field">4 or less <span class=range-field2> 9+</span>
+                  <input type="range" id="value" value="1" step="1" min="4" max="9">
+              <output for=value id="value" class="value"></output>
+                </p>
+              </form>
+              </div>
+              </div>
 
-          </div>
-          
-       
-    </div> 
+    <div class="row health-maintenance">
+            <div class="col s3 question"><div class="selection">Stress</div></div>
+            <div class="col s9 dial">
+           <form action="range">
+              <p class="range-field">LOW <span class=range-field2>HIGH</span>
+                <input type="range" id="value" value="1" step="1" min="4" max="9">
+            <output for=value id="value" class="value"></output>
+              </p>
+            </form>
+            </div>
+            </div>
 
 
+  <!-- <div class="noUiSlider"></div>
+<span id="s1" class="example">40.00 - 80.00</span>
+         -->
 
-
-
+<!-- <form id="form1" method="post" action="#">
+     <label for="price">price</label>
+     <input id="price" type="text" disabled="disabled" />
+     <div id="slider-price"></div>
+     <input type="submit" id="submit" value="Submit" />
+</form> -->
 
 
   </div> <!-- !!!!!!! end col s10 -->
@@ -834,6 +863,39 @@ i.material-icons.md-45 {
     <br>
 <div class="elllipse"><img class="ellipse"src="images/Line.png"></div> <!-- //End Social History -->
 
+<!-- //Start Family History -->
+<div class="row info"> 
+      <div class="col s12"><h4 class="title-type"> Family History</h4>
+      <p class="description"> Understanding your family history helps your provider understand your future health risks.</p>
+      <!-- <span class="flow-text">This div is 12-columns wide on all screen sizes</span> -->
+  <div class="col s10 selection"><h5 class="questions">Which family member (mother, father, sister, brother, or other relative) has ever had any of the following conditions?</h5>
+      <div class="row selections">
+          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton</button></div>
+           <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton2</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">TESButton2</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled issues none disabledBtn">NONE</button></div>
+          <!-- <div class="col s3 selection"><a class="btn-flat disabled waves-effect waves-teal issues none">NONE</a></div> -->
+      </div>
+
+ <div class="row selections">
+          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">Prostate Surgery</button></div>
+          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">Thyroidectomy</button></div>
+ </div>
+ <div class="row selections other">
+          <div class="col s3 selection"><button class="btn-flat disabled disabledBtn">OTHER</button></div>
+          <div class="col s6 selection"><button class="btn-flat disabled issues disabledBtn aditional-info">Tell your provider about your other condition(s)during your next appointment.</button></div>
+          <!-- <div class="col s6 additional-info">Tell your provider about your other condition(s)during your next appointment.</</div> -->
+ </div>
+
+
+  </div> <!-- end col s10 -->
+      <div class="col s2 offset-s1"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"></div>
+      </div>
+      <!-- <div class="col s2 offset-s10"><span class="flow-text">6-columns (offset-by-6)</span></div> -->
+    </div>
+    <br>
+<div class="elllipse"><img class="ellipse"src="images/Line.png"></div> <!-- // END Family History -->
+
 
 </div><!-- end CONTAINER-->
 
@@ -841,7 +903,7 @@ i.material-icons.md-45 {
                               =          END #Patient Forms CONTAINER!!!!!!      =
                               ======================================-->
 
-
+                              
 <!-- <footer>
       <p class="footer-text" a href="#consent-form">Submit</p>   <i class="material-icons md-45">chevron_right</i>
 <!    <!-<a href='patient.html#patient'>Patient Click </a>
@@ -876,19 +938,9 @@ btn.on('click', function() {
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
 
- var slider = document.getElementById('test5');
-  noUiSlider.create(slider, {
-   start: [20, 80],
-   connect: true,
-   step: 1,
-   range: {
-     'min': 0,
-     'max': 100
-   },
-   format: wNumb({
-     decimals: 0
-   })
-  });
+// function outputUpdate(num) {
+// document.querySelector('#output').value = num;
+// }
         
 
 </script>
