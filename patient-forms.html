@@ -44,19 +44,7 @@
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-45 { font-size: 45px; }
 
-  
-/* fix padding under menu after resize */
-/*@media screen and (max-width: 767px) {
-  body { padding-top: 75px; }
-}
-@media screen and (min-width:768px) and (max-width: 991px) {
-  body { padding-top: 150px; }
-}
-@media screen and (min-width: 992px) {
-  body { padding-top: 75px; }
-}*/
-
-
+ 
 html, body {
   font-family: "proximaNova-regular",Helvetica,Arial,sans-serif;
   font-size: 10px;
@@ -87,7 +75,8 @@ li.active.navHead {
 
 .container{
   position: relative;
- /* height: 100vh;*/
+  padding-top: 95px;
+  /*height: 100vh;*/
  /* overflow: scroll;*/
 }
 .col.s12 {
@@ -95,7 +84,6 @@ li.active.navHead {
 }
  /*<!-- SECTION patient-form -->*/
 section#patient-forms {
-    padding-top: 10vh;
     background: #FFFFFF;
     color: #666666;
 }
@@ -455,7 +443,7 @@ footer {
     width: 100%;
 }
 
-p.footer-text {
+input.footer-text {
     color: #FFFFFF;
     display: inline-block;
     transform: translateY(-75%);
@@ -464,7 +452,7 @@ p.footer-text {
 }
 i.material-icons.md-45 {
     color: white;
-    margin-left: 15px;
+    margin-left: -8px;
     margin-top: 15px;
 }
 /*/////FOOTER////*/
@@ -1686,8 +1674,13 @@ i.material-icons.md-45 {
     </div>
     <br>
 <div class="elllipse"><img class="ellipse"src="images/Line.png"></div> <!-- // END Family History -->
+<!-- <footer>
+  <p class="footer-text" a href="#thanks">Submit</p>   <i class="material-icons md-45">chevron_right</i>
+  <a href='thanks.html#thanks'>Thanks </a>
+</footer> -->
 <footer>
-  <p class="footer-text" a href="#consent-form">Submit</p>   <i class="material-icons md-45">chevron_right</i>
+       <input type="button" class="footer-text" value="SUBMIT FORM" onclick="window.location.href='thanks.html#thanks';">
+        <i class="material-icons md-45">chevron_right</i>
 </footer>
 
 </div><!-- end CONTAINER-->
@@ -1738,6 +1731,12 @@ btn.on('click', function() {
           $(this).toggleClass('active');
         });
       });
+
+
+  $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+ 
    
 </script>
 
