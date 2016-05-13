@@ -42,19 +42,7 @@
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-45 { font-size: 45px; }
-  
-/* fix padding under menu after resize */
-/*@media screen and (max-width: 767px) {
-  body { padding-top: 75px; }
-}
-@media screen and (min-width:768px) and (max-width: 991px) {
-  body { padding-top: 150px; }
-}
-@media screen and (min-width: 992px) {
-  body { padding-top: 75px; }
-}*/
-
-
+ 
 html, body {
   background: #6AC5FB !important;
   color: white !important;
@@ -64,36 +52,33 @@ html, body {
   margin: 0;
 }
 nav {
-    background-color: #F9F9F9 !important;
-    height: 111px;
+  background-color: #F9F9F9 !important;
+  height: 111px;
 }
 img.primary-logo {
-    width: 250px;
-    height: 50px;
+  width: 250px;
+  height: 50px;
 }
 
 nav .nav-wrapper {
-   /* position: relative;
-    height: 100%;
-    display: inline-block;
-    width: 100%;*/
-    padding-top: 5vh !important;
-    padding-left: 3%;
-    padding-right: 3%;
+  padding-top: 5vh !important;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 img.version-logo {
-    float: right;
+  float: right;
 }
 
 li.active.navHead {
-    background: none !important;
+  background: none !important;
 }
 
 .container{
   position: relative;
   height: 100vh;
   overflow: scroll;
+  padding-top: 111px;
 }
 
 /* centered columns styles */
@@ -109,11 +94,9 @@ li.active.navHead {
   margin-right:-4px;
 }
 
-
 section#consent-form {
-    padding-top: 10vh;
-    background: #FFFFFF;
-    color: #666666;
+  background: #FFFFFF;
+  color: #666666;
 }
 p.treatment {
   font-family: "proximaNova-semiBold";
@@ -125,38 +108,34 @@ p.consent-text {
   font-size: 1.5rem;
   color: #666666;
 }
+i.material-icons.md-45 {
+  color: white;
+  margin-left: -10px;
+  margin-top: 15px;
+}
  /*<!-- SECTION consent-form -->*/
 
 /*/////FOOTER////*/
 footer {
   font-family: "proximaNova-semiBold";
-    background: #F7774A;
-    height: 70px;
-    font-size: 1.5rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background: #F7774A;
+  height: 70px;
+  font-size: 1.5rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
-    color: #FFFFFF;
-    display: inline-block;
-    transform: translateY(-75%);
-    background: transparent;
-    border: none;
+  color: #FFFFFF;
+  display: inline-block;
+  transform: translateY(-75%);
+  background: transparent;
+  border: none;
 }
-i.material-icons.md-45 {
-    color: white;
-    margin-left: 15px;
-    margin-top: 15px;
-}
-/*input[type="button" i]:active {
-    background: transparent;
-    border: none;
-}*/
-/*/////FOOTER////*/
 
+/*/////FOOTER////*/
 </style>
 
  <!-- Compiled and minified JavaScript -->
@@ -178,8 +157,6 @@ i.material-icons.md-45 {
       </div>
    </nav>
 </div>
-
-<!-- #patient-launch Section -->
 
 <!-- #Consent Form -->
 <section id="consent-form"> 
@@ -203,11 +180,5 @@ I authorize Premise Health to release information to my designated insurance pla
 </footer>
 </section><!-- #Consent Form end section -->
 
-
-<!-- END# Consent Form -->
-
 </body>
-
-
-
 </html>                                   
