@@ -261,7 +261,6 @@ i.material-icons.md-18.calendar {
 
 /* SOCIAL HISTORY*/
 .row.selections.col.s9.offset-s3 {
-   /* background: pink;*/
     padding: 0;
 }
 .col.s3.selection.social {
@@ -297,10 +296,7 @@ span.range-field2 {
 }
 
 /*/////Family History////*/
-table.bordered.highlight {
-    width: 576px;
-    background: pink;
-}
+
 h5.questions.shorter {
     width: 420px;
 }
@@ -328,52 +324,64 @@ button.col.s2.btn-flat.disabled.enabledBtn  {
     width: 140px;
 }
 .col.s12.family-title {
-    background: pink;
-    width: 576px;
-    height: 29px;
-    text-align: right;
     margin-top: 50px;
+    padding: 0;
 }
-/*.col.s5.criteria {
-    background: green;
-    height: 71px;
-    width: 226px;
-    position: relative;
-  
-}*/
+
 .col.s5.criteria {
-    background: green;
+    font-family: "proximaNova-semiBold";
+    font-size: 1.2rem;
+    color: #666666;
     height: 71px;
     width: 220px;
     padding: 0;
     position: relative;
     margin: 0;
+    border: .1px solid #E0E0E0;
+    padding-top: 25px;
+    padding-left: 15px;
 }
-/*.col.s7.checks {
-    width: 350px;
-    margin: 0;
-    padding: 0;
-   /* display: flex;*/
-    /*height: 71px;
-}*/
+
 
 .col.s7.checks {
-    width: 355px;
-    margin: 0;
-    padding-left: -3px;
+    width: 350px;
+   /* margin: 0;
+    padding-left: -3px;*/
     display: flex;
     height: 71px;
-    background: black;
+   /* background: black;*/
     position: relative;
+    padding: 0;
+}
+
+.col.s1.box-title {
+  font-family: "proximaNova-semiBold";
+    font-size: 1.2rem;
+    color: #979797;
+    width: 71px;
+    text-align: center;
+    border: none;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.col.s7.titles {
+    /* background: purple; */
+    width: 350px;
+    /*position: flex;*/
+    float: right;
+    display: flex;
+    margin-right: 6px;
+    padding: 0;
 }
 .container.lgsquare {
         width: 70px;
-        height: 70px;
+        height: 71px;
         display: inline-block;
         position: relative;
         border: 0.5px solid #E0E0E0;
-        margin: 0;
-        margin-left: -5px;
+        /*margin: 0;
+        margin-left: -5px;*/
        /* margin-top: -5px;*/
       }
       .square {
@@ -387,9 +395,16 @@ button.col.s2.btn-flat.disabled.enabledBtn  {
         margin-top: -10.5px;
         top: 50%;
       }
+      .container.lgsquare.active {
+      border: 1px solid #82D5BD;
+      margin-right: -2px;
+}
+
      .container.lgsquare::before {
         content: "✓";
         position: absolute;
+        font-size: 18px;
+        color: white;
         width: 10px;
         height: 10px;
         top: 50%;
@@ -420,7 +435,13 @@ button.col.s2.btn-flat.disabled.enabledBtn  {
         border: 1px solid #82D5BD;
         transition: all 100ms ease-in;
       }
-
+.col.s10.end-forms {
+    display: inline-block;
+    padding: 0;
+    width: 576px;
+    /* position: relative; */
+    padding-top: 50px;
+}
 
 /*/////FOOTER////*/
 footer {
@@ -986,42 +1007,678 @@ i.material-icons.md-45 {
 
 <!-- //Start Family History -->
 <div class="row info"> 
-      <div class="col s12"><h4 class="title-type"> Family History</h4>
-      <p class="description"> Understanding your family history helps your provider understand your future health risks.</p>
-  <div class="col s10 selection">
-      <div class="row selections family">
+  <div class="col s12"><h4 class="title-type"> Family History</h4>
+    <p class="description"> Understanding your family history helps your provider understand your future health risks.</p>
+    <div class="col s10 selection">
+        <div class="row selections family">
           <h5 class=" col s10 questions shorter">Which family member (mother, father, sister, brother, or other relative) has ever had any of the following conditions?</h5> <button class="col s2 btn-flat disabled disabledBtn">UNKNOWN</button>
-      </div>
-
-      <div class="col s12 family-title">Div title here</div>
-      <div class="col s5 criteria">Small 5</div>
-      <div class="col s7 checks">
-          <!-- <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"/>
-          <label for="filled-in-box"></label> -->
+        </div>
+      <div class="col s12 family-title">
+        <div class="col s5"></div>
+        <div class="col s7 titles"> 
+          <div class="col s1 box-title">Mother</div>
+          <div class="col s1 box-title">Father</div>
+          <div class="col s1 box-title">Sister</div>
+          <div class="col s1 box-title">Brother</div>
+          <div class="col s1 box-title">Other</div>
+        </div>
+      </div> <!-- //end col s12 family-title -->
+    </div>
+   
+     <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
           <div class="container lgsquare">
-      <div class="square">
-      </div>
-    </div>
-    <div class="container lgsquare">
-      <div class="square">
-      </div>
-    </div>
-    <div class="container lgsquare">
-      <div class="square">
-      </div>
-    </div>
-    <div class="container lgsquare">
-      <div class="square">
-      </div>
-    </div>
-    <div class="container lgsquare">
-      <div class="square">
-      </div>
-    </div>
-    
-
-      </div>
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+        <div class="col s5 criteria">ADD/ADHD</div>
+        <div class="col s7 checks">
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+          <div class="container lgsquare">
+            <div class="square">
+            </div>
+          </div>
+        </div>
+      
+      <div class="col s10 end-forms">
+          <button class="col s2 btn-flat disabled disabledBtn">UNKNOWN</button>
+          <div class="col s3 offset-s6"><button class="btn-flat disabled issues disabledBtn none">NONE</button></div>
+        </div>
   
+
+
+
+
 
   </div> <!-- end col s10 -->
       <div class="col s2 offset-s1"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"><img class="page-placement"src="images/multi-select.png"></div>
@@ -1073,19 +1730,14 @@ btn.on('click', function() {
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
 
-// function outputUpdate(num) {
-// document.querySelector('#output').value = num;
-// }
- // <script type="text/javascript">
+
       $(document).ready(function() {
         console.log('ready');
         $('.container.lgsquare').click(function() {
           $(this).toggleClass('active');
         });
       });
-    //</script>
-        
-
+   
 </script>
 
 
