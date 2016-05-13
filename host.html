@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
 <style>
   @font-face {
     font-family: "proximaNova-semiBold";
@@ -41,18 +42,6 @@
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
-  
-/* fix padding under menu after resize */
-/*@media screen and (max-width: 767px) {
-  body { padding-top: 75px; }
-}
-@media screen and (min-width:768px) and (max-width: 991px) {
-  body { padding-top: 150px; }
-}
-@media screen and (min-width: 992px) {
-  body { padding-top: 75px; }
-}*/
-
 
 html, body {
   background: #6AC5FB !important;
@@ -62,23 +51,23 @@ html, body {
   position: relative;
   margin: 0;
 }
+
 nav {
-    background-color: #53B6F0 !important;
-    height: 11vh !important;
-    padding-top: 5vh !important;
-    height: 111px;
+  background-color: #53B6F0 !important;
+  padding-top: 5vh !important;
+  height: 111px;
 }
 
 li.active.navHead {
-    background: none !important;
+  background: none !important;
 }
 
 .livewell {
   width: 47vw;
   padding-top: 2vh;
   padding-left: 25px;
-  
 }
+
 .kioskbrand {
   width: 26vw;
   float: right;
@@ -90,6 +79,7 @@ li.active.navHead {
    height: 100vh;
   position: relative;
   overflow: scroll;
+  padding-top: 145px;
 }
 
 /* centered columns styles */
@@ -107,9 +97,11 @@ li.active.navHead {
 
 h4.password {
   font-family: 'proximaNova-light';
-  padding-top: 8vh;
 }
 
+.row.row-centered.btns {
+  padding-top: 15px;
+}
 
 .numbers {
   font-family: 'proximaNova-light';
@@ -117,8 +109,7 @@ h4.password {
   height: 70vh;
   width: 50vw;
   display: inline-block;
-  color: #115F98;
-    
+  color: #115F98;   
 }
 
 .btn-round {
@@ -130,8 +121,6 @@ h4.password {
   position: relative;
   cursor: pointer;
   display: inline-block;
-  margin-top: 25px;
-  margin-left: 15px;
   border-style: solid;
   border-color: #115F98;
 }
@@ -153,6 +142,9 @@ h4.password {
   font-size: 20px;
 }
 
+input.col.s3.patient {
+    text-align: left;
+}
 .collection {
     border: 1px solid #e0e0e0;
     border-radius: 0 !important;
@@ -246,16 +238,16 @@ img.circle.bigger {
 <section id="home">  
 <div class="container">
     <div class="row row-centered">
-            <h4 class="password">Enter Passcode</h2> <li><a href="#pass-entered">Submit </a></li></h4>
+            <h4 class="password">Enter Passcode</h4>
             <div class="numbers">
               <i class="material-icons md-36">radio_button_unchecked</i>
               <i class="material-icons md-36">radio_button_unchecked</i>
               <i class="material-icons md-36">radio_button_unchecked</i>
               <i class="material-icons md-36">radio_button_unchecked</i>
 
-            <div class="row row-centered">
-              <div class="btn-round"><span>1</span></div>
-             <div class="btn-round"><span>2</span></div>
+            <div class="row row-centered btns">
+              <div class="btn-round" input type="button" id="myButton"><span>1</span></div>
+              <div class="btn-round"><span>2</span></div>
             <div class="btn-round"><span>3</span></div>
             </div>
             <div class="row row-centered">
@@ -282,15 +274,13 @@ img.circle.bigger {
 </section>
 <!-- /* #HOME */ -->
 
-
 <!-- #Pass Entered Section -->
 <section id="pass-entered">  
 <div class="container">
-
-<div class="col s12 patient-checkin">
-  <div class="col s6 hour">8 AM</div>
-  <div class="col s6 booked-checked"><strong>127</strong> Booked | <strong>56</strong> Checked-In</div>
-</div>
+  <div class="col s12 patient-checkin">
+    <div class="col s6 hour">8 AM</div>
+    <div class="col s6 booked-checked"><strong>127</strong> Booked | <strong>56</strong> Checked-In</div>
+  </div>
 
 <ul class="collection">
     <div class="row collection col s12">
@@ -298,10 +288,7 @@ img.circle.bigger {
     <li class="collection-item col s10">
       <div class="collection-item avatar">
       <img src="images/avatar.jpeg" class="circle">
-      <div class="col s3 patient">Erik Bishop
-       <a href='patient-launch.html#patient-launch'>Patient Click </a>
-       <!-- <input type="button" value="Testing PATINET" onclick="window.location.href='patient.html#patient';"> -->
-      </div>
+       <input type="button" class="col s3 patient" value="Erik Bishop" onclick="window.location.href='patient-launch.html#patient-launch';">
       <div class="col s3 doc">Dr. Randy Pittman</div>
       </div></li>
     </div>
@@ -418,4 +405,12 @@ img.circle.bigger {
 <!-- #Pass Entered Section END -->
 
 </body>
+
+<script>
+  var button_my_button = "#myButton";
+$(button_my_button).click(function(){
+ window.location.href='#pass-entered';
+});
+
+</script>
 </html>                                   
