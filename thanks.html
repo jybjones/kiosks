@@ -41,18 +41,6 @@
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
-  
-/* fix padding under menu after resize */
-/*@media screen and (max-width: 767px) {
-  body { padding-top: 75px; }
-}
-@media screen and (min-width:768px) and (max-width: 991px) {
-  body { padding-top: 150px; }
-}
-@media screen and (min-width: 992px) {
-  body { padding-top: 75px; }
-}*/
-
 
 html, body {
   background: #6AC5FB !important;
@@ -62,23 +50,23 @@ html, body {
   position: relative;
   margin: 0;
 }
+
 nav {
-    background-color: #53B6F0 !important;
-    height: 11vh !important;
-    padding-top: 5vh !important;
-    height: 111px;
+  background-color: #53B6F0 !important;
+  padding-top: 5vh !important;
+  height: 111px;
 }
 
 li.active.navHead {
-    background: none !important;
+  background: none !important;
 }
 
 .livewell {
   width: 47vw;
   padding-top: 2vh;
   padding-left: 25px;
-  
 }
+
 .kioskbrand {
   width: 26vw;
   float: right;
@@ -87,11 +75,10 @@ li.active.navHead {
 }
 
 .container {
-  margin-top: 40%;
+  height: 100vh;
   position: relative;
- overflow: scroll;
+  padding-top: 145px;
 }
-
 /* centered columns styles */
 .row-centered {
   text-align:center;
@@ -130,7 +117,7 @@ h3{
     <nav>
       <div class="nav-wrapper">
       <ul>
-            <li class="active navHead"><a href="#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li> 
+            <li class="active navHead"><a href="host.html#home"><img class="livewell" src="living-well-white.svg" alt="livingwell"></a></li> 
       </ul>
           <img class="kioskbrand"src="kiosk logo.svg" alt="kiosk">
       </div>
