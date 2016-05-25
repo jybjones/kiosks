@@ -1,5 +1,5 @@
 # kiosks
-Hi-Fi prototype of a client's new product feature: Kiosks. 
+Hi-Fi prototype of a client's new product feature: Kiosks. Left image is Invision, designed in Sketch originally, and the right image is the HTML/CSS version.
 
 
 ## Host View-1
