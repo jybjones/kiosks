@@ -1,5 +1,5 @@
 # kiosks
-kiosks
+Hi-Fi prototype of a client's new product feature: Kiosks. 
 
 
 ## Host View-1
