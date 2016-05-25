@@ -25,7 +25,7 @@ kiosks
 # Patient Forms-2
 ![2][sketch]
 
-[sketch]:https://cloud.githubusercontent.com/assets/11837845/15555704/8c754c7c-228f-11e6-8318-eb57966ee597.png
+[sketch]:https://cloud.githubusercontent.com/assets/11837845/15555706/8c7617a6-228f-11e6-97cf-e1af684d4567.png
 
 # Thanks
 ![2][sketch]
